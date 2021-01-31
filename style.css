@@ -1,47 +1,99 @@
 :root {
     --hover-color: rgb(170, 160, 160);
-    --dark1: rgb(13, 13, 13);
-    --dark2: rgb(25, 25, 25);
-    --dark3: rgb(40, 40, 40);
+    --dark0: hsl(0, 0%, 0%);
+    --dark1: hsl(0, 0%, 5%);
+    --dark2: hsl(0, 0%, 8%);
+    --dark3: hsl(0, 0%, 15%);
     --light: rgba(255, 255, 255, 0.884);
     --shadow: rgb(58, 58, 58);
     --link-color: rgb(88, 166, 255);
-    --font: Verdana, Geneva, Tahoma, sans-serif;
+    --font: 'Lato', sans-serif;
+    --pink: rgb(219, 129, 255);
+    --violet: rgb(200, 61, 255);
+}
+
+@keyframes card-hover {
+    from {
+        border-top: 3px solid var(--light);
+        padding: 3em 4em 2em 4em;
+    }
+    to {
+        border-top: 5px solid var(--violet);
+        padding: calc(3em - 2px) 4em 2em 4em;
+    }
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fade-in {
+    animation: fade-in ease-in 2s;
 }
 
 .welcome {
-    margin-top: 1em;
-    height: auto;
+    margin: 0 0 0 0;
+    /* height: calc(100vh - 51px); */
+    height: 100vh;
     text-align: center;
     width: 100%;
+    background-image: url("bg-img.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .welcome > h1 {
-    line-height: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5.5vw;
+    /* line-height: calc(100vh - 51px); */
+    line-height: 100vh;
 }
 
 .card {
-    background-color: var(--dark2);
-    margin-bottom: 3em;
-    padding: 1.5em 1.5em 1.5em 1.5em;
-    border-radius: 15px;
+    background-color: var(--dark1);
+    margin: 7em 0 3em 0;
+    padding: 3em 4em 2em 4em;
+    border-radius: 20px;
     box-shadow: 3px 3px 5px var(--shadow);
+    border-top: 3px solid var(--light);
 }
+
+.card > p {
+    margin: 1em 0 1em 0 !important;
+}
+
+.card > h2 {
+    font-family: 'Prata', serif;
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.card:hover {
+    animation-name: card-hover;
+    animation-duration: 50ms;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+/* .card::after {
+    animation-name: card-hover;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+} */
 
 .grow {
     transition: all .1s ease-in-out;
 }
 
 .grow:hover {
-    transform: scale(1.015);
+    transform: scale(1.03);
 }
 
 .right {
     margin-left: auto;
-}
-
-.card > p {
-    margin: 1em 0 1em 0 !important;
 }
 
 .icon {
@@ -50,7 +102,8 @@
 }
 
 .icon:hover {
-    color: var(--hover-color);
+    /* color: var(--hover-color); */
+    color: var(--violet);
 }
 
 .header-link, .footer-link {
@@ -73,7 +126,8 @@
 }
 
 body {
-    background-color: var(--dark1);
+    margin: 0 0 0 0;
+    background-color: var(--dark0);
     color: var(--light);
     position: relative;
     min-height: 100vh;
@@ -81,6 +135,7 @@ body {
 }
 
 main {
+    margin: 0 0 0 0;
     padding: 2% 7% 2% 7%;
     height: auto;
     text-align: justify;
@@ -97,15 +152,20 @@ a {
 } */
 
 footer, header {
-    background-color: var(--dark2);
+    background-color: var(--dark3);
     font-family: var(--font);
     padding: 1em 1em 1em 1em;
     width: 100%;
 }
 
+header {
+    position: fixed;
+    z-index: 2;
+}
+
 footer {
     text-align: center;
-    /* height: 7em; */
+    /* height: 12vh; */
     position: absolute;
     bottom: 0;
 }
