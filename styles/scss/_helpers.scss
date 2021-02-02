@@ -1,0 +1,10 @@
+@use 'sass:list';
+@import 'variables';
+
+@function color($n, $dark: false) {
+    @if $dark {
+        @return nth($dark-palette, $n);
+    } @else {
+        @return nth($palette, $n);
+    } 
+}

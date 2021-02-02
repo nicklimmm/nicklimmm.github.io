@@ -1,0 +1,12 @@
+@mixin full-width-dark {
+    width: 100%;
+    background-color: $dark4;
+}
+
+@mixin min-margin {
+    margin: 5px 5px 5px 5px;
+}
+
+@mixin med-margin {
+    margin: 10px 10px 10px 10px;
+}
