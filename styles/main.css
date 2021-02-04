@@ -94,6 +94,13 @@
           animation-direction: alternate;
 }
 
+.title {
+  padding: 0 4vw;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+}
+
 .welcome {
   margin: 0 0 0 0;
   height: 100vh;
@@ -130,6 +137,7 @@
 
 .header__link {
   color: #FFF3F0;
+  font-family: "Lato", sans-serif;
   margin: 0 0.15em 0 0.15em;
   padding: 1em 1em 1em 1em;
   text-decoration: none;
@@ -162,7 +170,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 *, *::before, *::after {
