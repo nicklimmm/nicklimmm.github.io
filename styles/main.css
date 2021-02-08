@@ -47,12 +47,6 @@
 }
 
 @use 'sass:list';
-@media screen and (max-width: 550px) {
-  main {
-    text-align: left !important;
-  }
-}
-
 html {
   top: 0;
   left: 0;
@@ -64,15 +58,19 @@ html {
   font-family: Montserrat, sans-serif;
 }
 
+main {
+  min-height: 100vh;
+}
+
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .navbar {
@@ -114,7 +112,11 @@ html {
 }
 
 .hero__text {
-  margin-left: 80px;
+  position: absolute;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  top: 50%;
+  margin: 0 12vw;
 }
 
 .hero__text--title h1 {
@@ -128,19 +130,52 @@ html {
   margin: 10px 0 10px 0;
 }
 
+.hero__illus {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 15vh;
+  right: 0;
+}
+
 .hero__illus img {
-  width: 516px;
-  height: 361px;
+  margin-left: auto;
+  margin-right: 5vw;
+  height: 35vmin;
+}
+
+.hero__vector {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .hero__vector img {
-  width: 100%;
-  z-index: -1;
+  position: absolute;
   bottom: 0;
+  width: 100%;
+  margin: auto 0 0 0;
+}
+
+.hero__shapes {
+  display: inline-block;
 }
 
 .hero__shapes img {
   width: 215px;
   height: 215px;
+}
+
+.yellow-button {
+  background-color: #FFDC09;
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
