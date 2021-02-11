@@ -47,6 +47,45 @@
 }
 
 @use 'sass:list';
+@media screen and (max-width: 550px) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav ul li:last-child, nav ul li:nth-last-child(2) {
+    display: block !important;
+  }
+  nav ul li:last-child a, nav ul li:nth-last-child(2) a {
+    margin: 0 10px;
+  }
+  .hero__text {
+    text-align: center;
+  }
+  .hero__text--title h1 {
+    font-size: 48px !important;
+  }
+  .hero__text--desc p {
+    font-size: 18px !important;
+  }
+  .hero__shapes {
+    display: none !important;
+  }
+  .hero__illus img {
+    margin: 0 auto !important;
+  }
+}
+
 html {
   top: 0;
   left: 0;
@@ -73,9 +112,8 @@ main {
           box-sizing: inherit;
 }
 
-.navbar {
+nav {
   z-index: 2000;
-  display: block;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -83,26 +121,30 @@ main {
           box-shadow: 0px 2px 5px 0px black;
 }
 
-.navbar nav ul {
+nav ul {
   list-style-type: none;
   overflow: hidden;
   margin: 20px 0;
   padding: 0 30px;
 }
 
-.navbar nav ul li {
+nav ul li {
   float: left;
 }
 
-.navbar nav ul li a {
+nav ul li a {
   margin: 14px 22px;
   text-decoration: none;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.navbar nav ul #nav-logo {
-  float: right !important;
+nav ul #nav-logo {
+  float: right;
+}
+
+nav ul #nav-button {
+  display: none;
 }
 
 .hero {
@@ -113,20 +155,21 @@ main {
 
 .hero__text {
   position: absolute;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(0, -60%);
+          transform: translate(0, -60%);
   top: 50%;
-  margin: 0 12vw;
+  padding: 0 10vw;
+  width: 100%;
 }
 
 .hero__text--title h1 {
   margin: 0;
   font-weight: 700;
-  font-size: 72px;
+  font-size: calc(min(5vw, 68px));
 }
 
 .hero__text--desc p {
-  font-size: 30px;
+  font-size: calc(min(2vw, 30px));
   margin: 10px 0 10px 0;
 }
 
@@ -145,14 +188,14 @@ main {
   height: 35vmin;
 }
 
-.hero__vector {
+.hero__bg {
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: -1;
 }
 
-.hero__vector img {
+.hero__bg img {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -160,12 +203,18 @@ main {
 }
 
 .hero__shapes {
-  display: inline-block;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 15vh;
+  right: 0;
 }
 
 .hero__shapes img {
-  width: 215px;
-  height: 215px;
+  margin-left: auto;
+  margin-right: 5vw;
+  height: 35vmin;
 }
 
 .yellow-button {

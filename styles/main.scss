@@ -4,12 +4,50 @@
 @import "scss/helpers";
 @import "scss/mixins";
 
-// @media screen and (max-width: 550px) {
-    
-// }
+@media screen and (max-width: 550px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            display: none;
+
+            &:last-child, &:nth-last-child(2) {
+                display: block !important;
+
+                a {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .hero {
+        &__text {
+            text-align: center;
+            
+            &--title h1 {
+                font-size: 48px !important;
+            }
+
+            &--desc p {
+                font-size: 18px !important;
+            }
+        }
+
+        &__shapes {
+            display: none !important;
+        }
+
+        &__illus img{
+            margin: 0 auto !important;
+        }
+    }
+}
 
 html {
-    @include set-top-left;
+    @include reset;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: $font;
@@ -22,45 +60,46 @@ main {
 *,
 *::before,
 *::after {
-    @include set-top-left;
+    @include reset;
     box-sizing: inherit;
 }
 
-.navbar {
+nav {
     z-index: 2000;
 
-    display: block;
     position: fixed;
-
     width: 100%;
 
     background-color: white;
     box-shadow: 0px 2px 5px 0px black;
 
-    nav {
-        ul {
-            list-style-type: none;
-            overflow: hidden;
+    ul {
+        list-style-type: none;
+        overflow: hidden;
 
-            margin: 20px 0;
-            padding: 0 30px;
+        margin: 20px 0;
+        padding: 0 30px;
 
-            li {
-                float: left;
+        li {
+            float: left;
 
-                a {
-                    margin: 14px 22px;
-                    text-decoration: none;
-                    color: black;
-                    font-weight: 600;
-                }
-            }
-
-            #nav-logo {
-                float: right !important;
+            a {
+                margin: 14px 22px;
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
             }
         }
+
+        #nav-logo {
+            float: right;
+        }
+
+        #nav-button {
+            display: none;
+        }
     }
+
 }
 
 .hero {
@@ -69,19 +108,23 @@ main {
     height: 100vh;
 
     &__text {
+        // display: flex;
+        // flex-direction: column;
+        // display: block;
         position: absolute;
-        transform: translate(0, -50%);
+        transform: translate(0, -60%);
         top: 50%;
-        margin: 0 12vw;
+        padding: 0 10vw;
+        width: 100%;
 
         &--title h1 {
             margin: 0;
             font-weight: 700;
-            font-size: 72px;
+            font-size: calc(min(5vw, 68px));
         }
 
         &--desc p {
-            font-size: 30px;
+            font-size: calc(min(2vw, 30px));
             margin: 10px 0 10px 0;
         }
     }
@@ -98,7 +141,7 @@ main {
         }
     }
 
-    &__vector {
+    &__bg {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -113,11 +156,15 @@ main {
     }
 
     &__shapes {
-        display: inline-block;
 
+        position: absolute;
+        display: flex;
+        top: 15vh;
+        right: 0;
         img {
-        width: 215px;
-        height: 215px;
+            margin-left: auto;
+            margin-right: 5vw;
+            height: 35vmin;
         }
     }
 }
