@@ -148,18 +148,18 @@ nav ul #nav-button {
 }
 
 .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.hero__text {
-  position: absolute;
-  -webkit-transform: translate(0, -60%);
-          transform: translate(0, -60%);
-  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 10vw;
   width: 100%;
+  height: 100vh;
 }
 
 .hero__text--title h1 {
@@ -173,19 +173,30 @@ nav ul #nav-button {
   margin: 10px 0 10px 0;
 }
 
+.hero .graphics-container {
+  position: relative;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  height: clamp(240px, 25vw, 300px);
+}
+
 .hero__illus {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 15vh;
-  right: 0;
+  z-index: 2;
 }
 
 .hero__illus img {
-  margin-left: auto;
-  margin-right: 5vw;
-  height: 35vmin;
+  height: clamp(240px, 25vw, 300px);
+}
+
+.hero__shapes {
+  position: absolute;
+  left: 23vw;
+  top: -11vw;
+}
+
+.hero__shapes img {
+  height: calc(clamp(240px, 25vw, 300px) - 100px);
 }
 
 .hero__bg {
@@ -200,21 +211,6 @@ nav ul #nav-button {
   bottom: 0;
   width: 100%;
   margin: auto 0 0 0;
-}
-
-.hero__shapes {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 15vh;
-  right: 0;
-}
-
-.hero__shapes img {
-  margin-left: auto;
-  margin-right: 5vw;
-  height: 35vmin;
 }
 
 .yellow-button {

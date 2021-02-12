@@ -103,20 +103,14 @@ nav {
 }
 
 .hero {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
     width: 100%;
     height: 100vh;
 
     &__text {
-        // display: flex;
-        // flex-direction: column;
-        // display: block;
-        position: absolute;
-        transform: translate(0, -60%);
-        top: 50%;
-        padding: 0 10vw;
-        width: 100%;
-
         &--title h1 {
             margin: 0;
             font-weight: 700;
@@ -129,15 +123,28 @@ nav {
         }
     }
 
+    .graphics-container {
+        position: relative;
+        flex-basis: 40%;
+        height: $hero-img;
+    }
+
     &__illus {
         position: absolute;
-        display: flex;
-        top: 15vh;
-        right: 0;
+        z-index: 2;
+        
         img {
-            margin-left: auto;
-            margin-right: 5vw;
-            height: 35vmin;
+            height: $hero-img;
+        }
+    }
+
+    &__shapes {
+        position: absolute;
+        left: 23vw;
+        top: -11vw;
+
+        img {
+            height: calc(#{$hero-img} - 100px);
         }
     }
 
@@ -154,20 +161,9 @@ nav {
             margin: auto 0 0 0;
         }
     }
-
-    &__shapes {
-
-        position: absolute;
-        display: flex;
-        top: 15vh;
-        right: 0;
-        img {
-            margin-left: auto;
-            margin-right: 5vw;
-            height: 35vmin;
-        }
-    }
 }
+
+
 
 .yellow-button {
     background-color: $secondary;

@@ -1,1 +1,5 @@
 @use 'sass:list';
+
+@function _min($a, $b) {
+    @return unquote("min(#{$a}, #{$b})");
+}
