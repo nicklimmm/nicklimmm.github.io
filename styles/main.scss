@@ -4,47 +4,6 @@
 @import "scss/helpers";
 @import "scss/mixins";
 
-@media screen and (max-width: 550px) {
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        li {
-            display: none;
-
-            &:last-child, &:nth-last-child(2) {
-                display: block !important;
-
-                a {
-                    margin: 0 10px;
-                }
-            }
-        }
-    }
-
-    .hero {
-        &__text {
-            text-align: center;
-            
-            &--title h1 {
-                font-size: 48px !important;
-            }
-
-            &--desc p {
-                font-size: 18px !important;
-            }
-        }
-
-        &__shapes {
-            display: none !important;
-        }
-
-        &__illus img{
-            margin: 0 auto !important;
-        }
-    }
-}
 
 html {
     @include reset;
@@ -77,8 +36,7 @@ nav {
         list-style-type: none;
         overflow: hidden;
 
-        margin: 20px 0;
-        padding: 0 30px;
+        padding: 20px 30px;
 
         li {
             float: left;
@@ -93,44 +51,52 @@ nav {
 
         #nav-logo {
             float: right;
+            margin: 0;
         }
 
         #nav-button {
             display: none;
+            margin: 0 10px;
         }
     }
+}
 
+section {
+    padding: 0 10vw;
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10vw;
+
     width: 100%;
     height: 100vh;
+
+    position: relative;
 
     &__text {
         &--title h1 {
             margin: 0;
             font-weight: 700;
-            font-size: calc(min(5vw, 68px));
+            font-size: calc(min(5vw, 58px));
         }
 
         &--desc p {
-            font-size: calc(min(2vw, 30px));
+            font-size: calc(min(2vw, 24px));
             margin: 10px 0 10px 0;
         }
     }
 
     .graphics-container {
         position: relative;
-        flex-basis: 40%;
+        flex-basis: 30%;
         height: $hero-img;
     }
 
     &__illus {
         position: absolute;
+        left: 2vw;
         z-index: 2;
         
         img {
@@ -140,11 +106,11 @@ nav {
 
     &__shapes {
         position: absolute;
-        left: 23vw;
-        top: -11vw;
+        left: 200px;
+        top: -100px;
 
         img {
-            height: calc(#{$hero-img} - 100px);
+            height: $hero-shapes;
         }
     }
 
@@ -163,7 +129,15 @@ nav {
     }
 }
 
+// .about {
+//     &__header {
+//         font-size: ;
+//     }
 
+//     &__img {
+//         height: clamp(100px, 12vw, 250px);
+//     }
+// }
 
 .yellow-button {
     background-color: $secondary;
@@ -176,4 +150,51 @@ nav {
     padding: 8px 20px;
     text-decoration: none;
     border: none;
+}
+
+
+@media screen and (max-width: 650px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            display: none;
+        }
+
+        #nav-logo, #nav-button {
+            display: block;
+        }
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        &__text {
+            text-align: center;
+            
+            &--title h1 {
+                font-size: 48px;
+            }
+
+            &--desc p {
+                font-size: 18px;
+            }
+        }
+
+        .graphics-container {
+            width: 100%;
+            padding: 50px 0;
+        }
+
+        &__shapes {
+            display: none;
+        }
+
+        &__illus {
+            @include abs-center;
+            position: static;
+        }
+    }
 }
