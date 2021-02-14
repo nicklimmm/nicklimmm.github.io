@@ -11,6 +11,16 @@
     }
 }
 
+@keyframes show-up {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .grow {
     transition: transform .2s;
 
@@ -26,6 +36,14 @@
 .fade-in-down {
     animation: fadeInDown;
     animation-duration: 2.5s;
+}
+
+.show-up {
+    opacity: 0;
+    animation-name: show-up;
+    animation-duration: 2.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 }
 
 .breathing {
