@@ -73,6 +73,15 @@ main {
           box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #6400E4;
+}
+
 nav {
   z-index: 2000;
   position: fixed;
@@ -94,9 +103,7 @@ nav ul li {
 
 nav ul li a {
   font-weight: 500;
-  text-decoration: none;
   margin: 14px 22px;
-  color: black;
 }
 
 nav ul #nav-logo {
@@ -109,8 +116,19 @@ nav ul #nav-button {
   margin: 0 10px;
 }
 
+footer {
+  width: 100%;
+  height: 35vh;
+  margin-top: 5rem;
+  border-top: 1px solid black;
+}
+
+footer .copyright {
+  font-weight: 500;
+}
+
 section {
-  padding: 0 10vw;
+  padding: 0 12vw;
 }
 
 .hero {
@@ -160,17 +178,14 @@ section {
 }
 
 .hero__illus {
-  height: 10rem;
+  height: 18rem;
 }
 
 .hero__shapes {
   position: absolute;
-  left: 200px;
-  top: -100px;
-}
-
-.hero__shapes img {
-  height: clamp(120px, 15vw, 180px);
+  left: 16rem;
+  top: -8rem;
+  height: 12rem;
 }
 
 .hero__bg {
@@ -210,7 +225,7 @@ section {
 }
 
 .yellow-button {
-  background-color: #FFDC09;
+  background-color: #5CE30B;
   font-size: 20px;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
