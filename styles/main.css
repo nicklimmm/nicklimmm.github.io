@@ -35,45 +35,15 @@
 }
 
 .grow {
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .grow:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-.fade-in-down {
-  -webkit-animation: fadeInDown;
-          animation: fadeInDown;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-}
-
-.show-up {
-  opacity: 0;
-  -webkit-animation-name: show-up;
-          animation-name: show-up;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.breathing {
-  -webkit-animation: heartBeat;
-          animation: heartBeat;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 
 @use 'sass:list';
@@ -108,14 +78,14 @@ nav {
   position: fixed;
   width: 100%;
   background-color: white;
-  -webkit-box-shadow: 0px 2px 5px 0px black;
-          box-shadow: 0px 2px 5px 0px black;
+  -webkit-box-shadow: 0px 1px 4px 0px black;
+          box-shadow: 0px 1px 4px 0px black;
 }
 
 nav ul {
   list-style-type: none;
   overflow: hidden;
-  padding: 20px 30px;
+  padding: 20px 50px;
 }
 
 nav ul li {
@@ -123,10 +93,10 @@ nav ul li {
 }
 
 nav ul li a {
-  margin: 14px 22px;
-  text-decoration: none;
-  color: black;
   font-weight: 500;
+  text-decoration: none;
+  margin: 14px 22px;
+  color: black;
 }
 
 nav ul #nav-logo {
@@ -153,18 +123,32 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   height: 100vh;
   position: relative;
 }
 
 .hero__text--title h1 {
+  -webkit-animation: fadeInDown;
+          animation: fadeInDown;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
   margin: 0;
   font-weight: 700;
   font-size: 4rem;
 }
 
 .hero__text--desc p {
+  opacity: 0;
+  -webkit-animation-name: show-up;
+          animation-name: show-up;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   font-size: 1.5rem;
   margin: 10px 0 10px 0;
 }
@@ -173,11 +157,10 @@ section {
   position: relative;
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-  height: auto;
 }
 
-.hero__illus img {
-  height: clamp(150px, 20vw, 250px);
+.hero__illus {
+  height: 10rem;
 }
 
 .hero__shapes {
@@ -237,7 +220,10 @@ section {
   border: none;
 }
 
-@media screen and (max-width: 650px) {
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
   nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -259,7 +245,8 @@ section {
   }
   nav ul #nav-logo a,
   nav ul #nav-button a {
-    margin-left: 0;
+    margin: 0;
+    font-size: 1.4rem;
   }
   .hero {
     -webkit-box-orient: vertical;
@@ -272,12 +259,6 @@ section {
   }
   .hero__text {
     text-align: center;
-  }
-  .hero__text--title h1 {
-    font-size: 48px;
-  }
-  .hero__text--desc p {
-    font-size: 18px;
   }
   .hero .graphics-container {
     width: 100%;
@@ -297,7 +278,6 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    position: static;
   }
   .about {
     padding-top: 80px;

@@ -6,6 +6,7 @@
 
 html {
     @include reset;
+
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: $font;
@@ -29,22 +30,22 @@ nav {
     width: 100%;
 
     background-color: white;
-    box-shadow: 0px 2px 5px 0px black;
+    box-shadow: 0px 1px 4px 0px black;
 
     ul {
         list-style-type: none;
         overflow: hidden;
 
-        padding: 20px 30px;
+        padding: 20px 50px;
 
         li {
             float: left;
 
             a {
-                margin: 14px 22px;
-                text-decoration: none;
-                color: black;
                 font-weight: 500;
+                text-decoration: none;
+                margin: 14px 22px;
+                color: black;
             }
         }
 
@@ -69,21 +70,21 @@ section {
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
     height: 100vh;
 
     position: relative;
 
     &__text {
         &--title h1 {
+            @include fade-in-down(2.5s);
             margin: 0;
             font-weight: 700;
-            // font-size: calc(min(5vw, 58px));
             font-size: 4rem;
         }
 
         &--desc p {
-            // font-size: calc(min(2vw, 24px));
+            @include show-up(2.5s, 2.5s);
+
             font-size: 1.5rem;
             margin: 10px 0 10px 0;
         }
@@ -92,14 +93,10 @@ section {
     .graphics-container {
         position: relative;
         flex-basis: 30%;
-        height: auto;
     }
 
     &__illus {
-
-        img {
-            height: $hero-img;
-        }
+        height: 10rem;
     }
 
     &__shapes {
@@ -141,7 +138,6 @@ section {
     }
 
     &__header {
-        // font-size: 36px;
         font-size: 2.2rem;
     }
 
@@ -163,7 +159,11 @@ section {
     border: none;
 }
 
-@media screen and (max-width: 650px) {
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+
     nav ul {
         display: flex;
         flex-direction: row;
@@ -178,7 +178,8 @@ section {
             display: block;
 
             a {
-                margin-left: 0;
+                margin: 0;
+                font-size: 1.4rem;
             }
         }
     }
@@ -188,14 +189,6 @@ section {
         justify-content: center;
         &__text {
             text-align: center;
-
-            &--title h1 {
-                font-size: 48px;
-            }
-
-            &--desc p {
-                font-size: 18px;
-            }
         }
 
         .graphics-container {
@@ -209,7 +202,6 @@ section {
 
         &__illus {
             @include abs-center;
-            position: static;
         }
     }
 
