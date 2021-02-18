@@ -172,6 +172,10 @@ section {
   position: relative;
 }
 
+.hero__text {
+  margin-bottom: 25px;
+}
+
 .hero__text--title h1 {
   -webkit-animation: fadeInDown;
           animation: fadeInDown;
@@ -179,7 +183,6 @@ section {
           animation-duration: 2.5s;
   -webkit-animation-delay: 0;
           animation-delay: 0;
-  margin: 0;
   font-weight: 700;
   font-size: 4rem;
 }
@@ -195,23 +198,21 @@ section {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   font-size: 1.5rem;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 
 .hero .graphics-container {
   position: relative;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
 }
 
 .hero__illus {
-  height: 18rem;
+  height: 16rem;
 }
 
 .hero__shapes {
   position: absolute;
-  left: 16rem;
-  top: -8rem;
+  left: 15rem;
+  top: -7rem;
   height: 12rem;
 }
 
@@ -229,29 +230,68 @@ section {
   margin: auto 0 0 0;
 }
 
-.about {
+.intro {
   position: relative;
-  padding-top: 200px;
+  padding: 0 calc(12vw + 1rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  -ms-grid-rows: 2.4rem 8rem auto;
+      grid-template-rows: 2.4rem 8rem auto;
+      grid-template-areas: "header header" "img info" "desc desc";
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 1rem;
 }
 
-.about__bg {
+.intro__bg {
   position: absolute;
   width: 100%;
 }
 
-.about__bg img {
+.intro__bg img {
   width: 100%;
 }
 
-.about__header {
+.intro__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
   font-size: 2.2rem;
 }
 
-.about__img {
-  height: clamp(100px, 12vw, 250px);
+.intro__info {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: info;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 500;
+  font-style: italic;
 }
 
-.yellow-button {
+.intro__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  height: 8rem;
+}
+
+.intro__desc {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: desc;
+}
+
+.intro__desc p {
+  margin: 1rem 0;
+}
+
+.green-button {
   background-color: #5CE30B;
   font-size: 20px;
   font-family: Montserrat, sans-serif;

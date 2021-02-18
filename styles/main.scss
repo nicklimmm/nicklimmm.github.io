@@ -136,9 +136,9 @@ section {
     position: relative;
 
     &__text {
+        margin-bottom: 25px;
         &--title h1 {
             @include fade-in-down(2.5s);
-            margin: 0;
             font-weight: 700;
             font-size: 4rem;
         }
@@ -147,23 +147,22 @@ section {
             @include show-up(2.5s, 2.5s);
 
             font-size: 1.5rem;
-            margin: 10px 0 10px 0;
+            margin: 10px 0;
         }
     }
 
     .graphics-container {
         position: relative;
-        flex-basis: 30%;
     }
 
     &__illus {
-        height: 18rem;
+        height: 16rem;
     }
 
     &__shapes {
         position: absolute;
-        left: 16rem;
-        top: -8rem;
+        left: 15rem;
+        top: -7rem;
 
         height: 12rem;
     }
@@ -183,9 +182,20 @@ section {
     }
 }
 
-.about {
+.intro {
     position: relative;
-    padding-top: 200px;
+    padding: 0 calc(12vw + 1rem);
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 2.4rem 8rem auto;
+    grid-template-areas: 
+        "header header"
+        "img info"
+        "desc desc";
+
+    column-gap: 1rem;
+    row-gap: 1rem;
 
     &__bg {
         position: absolute;
@@ -197,15 +207,31 @@ section {
     }
 
     &__header {
+        grid-area: header;
         font-size: 2.2rem;
     }
 
+    &__info {
+        grid-area: info;
+        align-self: center;
+        font-weight: 500;
+        font-style: italic;
+    }
+
     &__img {
-        height: clamp(100px, 12vw, 250px);
+        grid-area: img;
+        height: 8rem;
+    }
+
+    &__desc {
+        grid-area: desc;
+        p {
+            margin: 1rem 0;
+        }
     }
 }
 
-.yellow-button {
+.green-button {
     background-color: $secondary;
 
     font-size: 20px;
