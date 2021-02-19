@@ -94,7 +94,7 @@ header nav {
 header nav ul {
   list-style-type: none;
   overflow: hidden;
-  padding: 20px 50px;
+  padding: 1.5rem 3.5rem;
 }
 
 header nav ul li {
@@ -108,12 +108,10 @@ header nav ul li a {
 
 header nav ul #nav-logo {
   float: right;
-  margin: 0;
 }
 
 header nav ul #nav-button {
   display: none;
-  margin: 0 10px;
 }
 
 footer {
@@ -291,20 +289,28 @@ section {
   margin: 1rem 0;
 }
 
+.education__card--logo {
+  height: 8rem;
+}
+
 .green-button {
   background-color: #5CE30B;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   border-radius: 20px;
-  padding: 8px 20px;
+  padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: none;
 }
 
+.green-button a:hover {
+  color: black;
+}
+
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
   nav ul {
     display: -webkit-box;
@@ -323,12 +329,16 @@ section {
   }
   nav ul #nav-logo,
   nav ul #nav-button {
-    display: block;
+    margin: 0 1rem;
+    display: block !important;
   }
   nav ul #nav-logo a,
   nav ul #nav-button a {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 1rem 1rem;
   }
   .hero {
     -webkit-box-orient: vertical;
@@ -360,9 +370,6 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-  }
-  .about {
-    padding-top: 80px;
   }
 }
 /*# sourceMappingURL=main.css.map */

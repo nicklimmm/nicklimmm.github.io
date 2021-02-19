@@ -45,7 +45,7 @@ header nav {
         list-style-type: none;
         overflow: hidden;
 
-        padding: 20px 50px;
+        padding: 1.5rem 3.5rem;
 
         li {
             float: left;
@@ -58,12 +58,10 @@ header nav {
 
         #nav-logo {
             float: right;
-            margin: 0;
         }
 
         #nav-button {
             display: none;
-            margin: 0 10px;
         }
     }
 }
@@ -231,22 +229,34 @@ section {
     }
 }
 
+.education {
+    &__card {
+        &--logo {
+            height: 8rem;
+        }
+    }
+}
+
 .green-button {
     background-color: $secondary;
 
-    font-size: 20px;
+    font-size: 1.1rem;
     font-family: $font;
     font-weight: 600;
 
     border-radius: 20px;
-    padding: 8px 20px;
+    padding: 0.6rem 1.3rem;
     text-decoration: none;
     border: none;
+
+    a:hover {
+        color: black;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     nav ul {
@@ -260,13 +270,18 @@ section {
 
         #nav-logo,
         #nav-button {
-            display: block;
+            margin: 0 1rem;
+            display: block !important;
 
             a {
                 margin: 0;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
+    }
+
+    footer {
+        padding: 1rem 1rem;
     }
 
     .hero {
@@ -290,7 +305,7 @@ section {
         }
     }
 
-    .about {
-        padding-top: 80px;
+    .green-button {
+
     }
 }
