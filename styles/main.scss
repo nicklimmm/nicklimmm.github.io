@@ -68,27 +68,8 @@ header nav {
 
 footer {
     width: 100%;
-    // height: 35vh;
 
     padding: 1rem 8rem;
-
-    // border-top: 1px solid black;
-
-    // .main-footer {
-    //     height: 80%;
-
-    //     .footer-links {
-    //         list-style-type: none;
-    //         overflow: hidden;
-
-    //         display: flex;
-    //         justify-content: space-around;
-
-    //         li {
-    //             float: left;
-    //         }
-    //     }
-    // }
 
     .sub-footer {
         display: flex;
@@ -206,7 +187,7 @@ section {
 
     &__header {
         grid-area: header;
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     &__info {
@@ -214,6 +195,7 @@ section {
         align-self: center;
         font-weight: 500;
         font-style: italic;
+        font-size: 1.2rem;
     }
 
     &__img {
@@ -230,10 +212,61 @@ section {
 }
 
 .education {
+    margin: 2rem 0;
+    &__header {
+        font-size: 2rem;
+    }
+
     &__card {
+        margin: 2rem 0;
+        padding: 1.5rem 4rem;
+        box-shadow: 5px 5px 4px -3px black;
+        border: 2px solid black;
+        border-radius: 12px;
+
         &--logo {
             height: 8rem;
         }
+
+        &--header {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.cca {
+    margin: 2rem 0;
+    &__header {
+        font-size: 2rem;
+    }
+
+    &__card {
+        margin: 2rem 0;
+        padding: 1.5rem 4rem;
+        box-shadow: 5px 5px 4px -3px black;
+        border: 2px solid black;
+        border-radius: 12px;
+        &--header {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.achievements {
+    margin: 2rem 0;
+    &__header {
+        font-size: 2rem;
+    }
+}
+
+.interests {
+    margin: 2rem 0;
+    &__header {
+        font-size: 2rem;
     }
 }
 
