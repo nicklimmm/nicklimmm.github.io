@@ -1,109 +1,11 @@
 @use '/styles/tools/animate.css';
+
 @import "scss/variables";
 @import "scss/animations";
 @import "scss/helpers";
 @import "scss/mixins";
+@import "scss/base";
 
-html {
-    @include reset;
-
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: $font;
-}
-
-main {
-    min-height: 100vh;
-}
-
-*,
-*::before,
-*::after {
-    @include reset;
-    box-sizing: inherit;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-
-    &:hover {
-        color: $primary;
-    }
-}
-
-header nav {
-    z-index: 2000;
-
-    position: fixed;
-    width: 100%;
-
-    background-color: white;
-    box-shadow: 0px 1px 4px 0px black;
-
-    ul {
-        list-style-type: none;
-        overflow: hidden;
-
-        padding: 1.5rem 3.5rem;
-
-        li {
-            float: left;
-
-            a {
-                font-weight: 500;
-                margin: 14px 22px;
-            }
-        }
-
-        #nav-logo {
-            float: right;
-        }
-
-        #nav-button {
-            display: none;
-        }
-    }
-}
-
-footer {
-    width: 100%;
-
-    padding: 1rem 8rem;
-
-    .sub-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        height: 20%;
-
-        padding: 0 2rem;
-        border-top: 1px solid black;
-
-        .copyright {
-            font-weight: 500;
-        }
-
-        .icons {
-            list-style-type: none;
-            overflow: hidden;
-
-            li {
-                float: left;
-                margin: 8px;
-
-                a {
-                    font-size: 1.8rem;
-                }
-            }
-        }
-    }
-}
-
-section {
-    padding: 0 12vw;
-}
 
 .hero {
     display: flex;
@@ -224,6 +126,11 @@ section {
         border: 2px solid black;
         border-radius: 12px;
 
+        .wrapper {
+            display: flex;
+            align-items: center;
+        }
+
         &--logo {
             height: 8rem;
         }
@@ -232,6 +139,16 @@ section {
             font-weight: 500;
             font-style: italic;
             font-size: 1.2rem;
+
+            margin: 0 2rem;
+        }
+
+        &--desc {
+            margin-top: 1rem;
+
+            li {
+                margin-top: 0.3rem;
+            }
         }
     }
 }
@@ -248,10 +165,19 @@ section {
         box-shadow: 5px 5px 4px -3px black;
         border: 2px solid black;
         border-radius: 12px;
+
         &--header {
             font-weight: 500;
             font-style: italic;
             font-size: 1.2rem;
+        }
+
+        &--desc {
+            margin-top: 1rem;
+
+            li {
+                margin-top: 0.3rem;
+            }
         }
     }
 }
@@ -261,12 +187,27 @@ section {
     &__header {
         font-size: 2rem;
     }
+
+    &__list {
+        margin-top: 1rem;
+
+        li {
+            margin-top: 0.3rem;
+        }
+    }
 }
 
 .interests {
     margin: 2rem 0;
     &__header {
         font-size: 2rem;
+    }
+    &__list {
+        margin-top: 1rem;
+
+        li {
+            margin-top: 0.3rem;
+        }
     }
 }
 
@@ -288,35 +229,6 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
-    html {
-        font-size: 12px;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        li {
-            display: none;
-        }
-
-        #nav-logo,
-        #nav-button {
-            margin: 0 1rem;
-            display: block !important;
-
-            a {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    footer {
-        padding: 1rem 1rem;
-    }
-
     .hero {
         flex-direction: column;
         justify-content: center;

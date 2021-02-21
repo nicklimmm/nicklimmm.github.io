@@ -1,0 +1,131 @@
+html {
+    @include reset;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font;
+}
+
+main {
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    @include reset;
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+header nav {
+    z-index: 2000;
+
+    position: fixed;
+    width: 100%;
+
+    background-color: white;
+    box-shadow: 0px 1px 4px 0px black;
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+
+        padding: 1.5rem 3.5rem;
+
+        li {
+            float: left;
+
+            a {
+                font-weight: 500;
+                margin: 14px 22px;
+            }
+        }
+
+        #nav-logo {
+            float: right;
+        }
+
+        #nav-button {
+            display: none;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+
+    padding: 1rem 8rem;
+
+    .sub-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 20%;
+
+        padding: 0 2rem;
+        border-top: 1px solid black;
+
+        .copyright {
+            font-weight: 500;
+        }
+
+        .icons {
+            list-style-type: none;
+            overflow: hidden;
+
+            li {
+                float: left;
+                margin: 8px;
+
+                a {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 0 12vw;
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            display: none;
+        }
+
+        #nav-logo,
+        #nav-button {
+            margin: 0 1rem;
+            display: block !important;
+
+            a {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 1rem 1rem;
+    }
+}

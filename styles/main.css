@@ -156,6 +156,40 @@ section {
   padding: 0 12vw;
 }
 
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav ul #nav-logo,
+  nav ul #nav-button {
+    margin: 0 1rem;
+    display: block !important;
+  }
+  nav ul #nav-logo a,
+  nav ul #nav-button a {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 1rem 1rem;
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,6 +341,15 @@ section {
   border-radius: 12px;
 }
 
+.education__card .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .education__card--logo {
   height: 8rem;
 }
@@ -315,6 +358,15 @@ section {
   font-weight: 500;
   font-style: italic;
   font-size: 1.2rem;
+  margin: 0 2rem;
+}
+
+.education__card--desc {
+  margin-top: 1rem;
+}
+
+.education__card--desc li {
+  margin-top: 0.3rem;
 }
 
 .cca {
@@ -340,6 +392,14 @@ section {
   font-size: 1.2rem;
 }
 
+.cca__card--desc {
+  margin-top: 1rem;
+}
+
+.cca__card--desc li {
+  margin-top: 0.3rem;
+}
+
 .achievements {
   margin: 2rem 0;
 }
@@ -348,12 +408,28 @@ section {
   font-size: 2rem;
 }
 
+.achievements__list {
+  margin-top: 1rem;
+}
+
+.achievements__list li {
+  margin-top: 0.3rem;
+}
+
 .interests {
   margin: 2rem 0;
 }
 
 .interests__header {
   font-size: 2rem;
+}
+
+.interests__list {
+  margin-top: 1rem;
+}
+
+.interests__list li {
+  margin-top: 0.3rem;
 }
 
 .green-button {
@@ -372,37 +448,6 @@ section {
 }
 
 @media only screen and (max-width: 500px) {
-  html {
-    font-size: 12px;
-  }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  nav ul li {
-    display: none;
-  }
-  nav ul #nav-logo,
-  nav ul #nav-button {
-    margin: 0 1rem;
-    display: block !important;
-  }
-  nav ul #nav-logo a,
-  nav ul #nav-button a {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  footer {
-    padding: 1rem 1rem;
-  }
   .hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
