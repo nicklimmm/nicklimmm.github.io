@@ -156,6 +156,10 @@ section {
   padding: 0 12vw;
 }
 
+section .title {
+  font-size: 2rem;
+}
+
 @media only screen and (max-width: 500px) {
   html {
     font-size: 12px;
@@ -262,77 +266,7 @@ section {
   margin: auto 0 0 0;
 }
 
-.intro {
-  position: relative;
-  padding: 0 calc(12vw + 1rem);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  -ms-grid-rows: 2.4rem 8rem auto;
-      grid-template-rows: 2.4rem 8rem auto;
-      grid-template-areas: "header header" "img info" "desc desc";
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
-  row-gap: 1rem;
-}
-
-.intro__bg {
-  position: absolute;
-  width: 100%;
-}
-
-.intro__bg img {
-  width: 100%;
-}
-
-.intro__header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: header;
-  font-size: 2rem;
-}
-
-.intro__info {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: info;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-weight: 500;
-  font-style: italic;
-  font-size: 1.2rem;
-}
-
-.intro__img {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: img;
-  height: 8rem;
-}
-
-.intro__desc {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: desc;
-}
-
-.intro__desc p {
-  margin: 1rem 0;
-}
-
-.education {
-  margin: 2rem 0;
-}
-
-.education__header {
-  font-size: 2rem;
-}
-
-.education__card {
+.card {
   margin: 2rem 0;
   padding: 1.5rem 4rem;
   -webkit-box-shadow: 5px 5px 4px -3px black;
@@ -341,95 +275,29 @@ section {
   border-radius: 12px;
 }
 
-.education__card .wrapper {
+.card .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
-.education__card--logo {
+.card__logo, .card__img {
   height: 8rem;
+  margin-right: 2rem;
 }
 
-.education__card--header {
-  font-weight: 500;
-  font-style: italic;
-  font-size: 1.2rem;
-  margin: 0 2rem;
-}
-
-.education__card--desc {
-  margin-top: 1rem;
-}
-
-.education__card--desc li {
-  margin-top: 0.3rem;
-}
-
-.cca {
-  margin: 2rem 0;
-}
-
-.cca__header {
-  font-size: 2rem;
-}
-
-.cca__card {
-  margin: 2rem 0;
-  padding: 1.5rem 4rem;
-  -webkit-box-shadow: 5px 5px 4px -3px black;
-          box-shadow: 5px 5px 4px -3px black;
-  border: 2px solid black;
-  border-radius: 12px;
-}
-
-.cca__card--header {
+.card__header {
   font-weight: 500;
   font-style: italic;
   font-size: 1.2rem;
 }
 
-.cca__card--desc {
-  margin-top: 1rem;
-}
-
-.cca__card--desc li {
-  margin-top: 0.3rem;
-}
-
-.achievements {
-  margin: 2rem 0;
-}
-
-.achievements__header {
-  font-size: 2rem;
-}
-
-.achievements__list {
-  margin-top: 1rem;
-}
-
-.achievements__list li {
-  margin-top: 0.3rem;
-}
-
-.interests {
-  margin: 2rem 0;
-}
-
-.interests__header {
-  font-size: 2rem;
-}
-
-.interests__list {
-  margin-top: 1rem;
-}
-
-.interests__list li {
-  margin-top: 0.3rem;
+.card__desc li, .card__desc p {
+  margin: 0.3rem 0;
 }
 
 .green-button {

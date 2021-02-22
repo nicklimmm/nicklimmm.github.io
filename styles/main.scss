@@ -63,153 +63,37 @@
     }
 }
 
-.intro {
-    position: relative;
-    padding: 0 calc(12vw + 1rem);
+.card {
+    margin: 2rem 0;
+    padding: 1.5rem 4rem;
+    box-shadow: 5px 5px 4px -3px black;
+    border: 2px solid black;
+    border-radius: 12px;
 
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 2.4rem 8rem auto;
-    grid-template-areas: 
-        "header header"
-        "img info"
-        "desc desc";
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
-    column-gap: 1rem;
-    row-gap: 1rem;
-
-    &__bg {
-        position: absolute;
-        width: 100%;
-
-        img {
-            width: 100%;
-        }
+    &__logo, &__img {
+        height: 8rem;
+        margin-right: 2rem;
     }
 
     &__header {
-        grid-area: header;
-        font-size: 2rem;
-    }
-
-    &__info {
-        grid-area: info;
-        align-self: center;
         font-weight: 500;
         font-style: italic;
-        font-size: 1.2rem;
-    }
-
-    &__img {
-        grid-area: img;
-        height: 8rem;
+        font-size: $header-size;
     }
 
     &__desc {
-        grid-area: desc;
-        p {
-            margin: 1rem 0;
+        li, p {
+            margin: 0.3rem 0;
         }
     }
 }
 
-.education {
-    margin: 2rem 0;
-    &__header {
-        font-size: 2rem;
-    }
-
-    &__card {
-        margin: 2rem 0;
-        padding: 1.5rem 4rem;
-        box-shadow: 5px 5px 4px -3px black;
-        border: 2px solid black;
-        border-radius: 12px;
-
-        .wrapper {
-            display: flex;
-            align-items: center;
-        }
-
-        &--logo {
-            height: 8rem;
-        }
-
-        &--header {
-            font-weight: 500;
-            font-style: italic;
-            font-size: 1.2rem;
-
-            margin: 0 2rem;
-        }
-
-        &--desc {
-            margin-top: 1rem;
-
-            li {
-                margin-top: 0.3rem;
-            }
-        }
-    }
-}
-
-.cca {
-    margin: 2rem 0;
-    &__header {
-        font-size: 2rem;
-    }
-
-    &__card {
-        margin: 2rem 0;
-        padding: 1.5rem 4rem;
-        box-shadow: 5px 5px 4px -3px black;
-        border: 2px solid black;
-        border-radius: 12px;
-
-        &--header {
-            font-weight: 500;
-            font-style: italic;
-            font-size: 1.2rem;
-        }
-
-        &--desc {
-            margin-top: 1rem;
-
-            li {
-                margin-top: 0.3rem;
-            }
-        }
-    }
-}
-
-.achievements {
-    margin: 2rem 0;
-    &__header {
-        font-size: 2rem;
-    }
-
-    &__list {
-        margin-top: 1rem;
-
-        li {
-            margin-top: 0.3rem;
-        }
-    }
-}
-
-.interests {
-    margin: 2rem 0;
-    &__header {
-        font-size: 2rem;
-    }
-    &__list {
-        margin-top: 1rem;
-
-        li {
-            margin-top: 0.3rem;
-        }
-    }
-}
 
 .green-button {
     background-color: $secondary;

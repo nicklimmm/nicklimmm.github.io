@@ -97,6 +97,9 @@ footer {
 
 section {
     padding: 0 12vw;
+    .title {
+        font-size: $title-size;
+    }
 }
 
 @media only screen and (max-width: 500px) {
