@@ -84,12 +84,16 @@
     &__header {
         font-weight: 500;
         font-style: italic;
-        font-size: $header-size;
+        font-size: 1rem;
     }
 
     &__desc {
-        li, p {
+        li {
             margin: 0.3rem 0;
+        }
+
+        p {
+            margin: 0.7rem 0;
         }
     }
 }
@@ -112,7 +116,38 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+
+@include media-breakpoint('lg') {
+
+    html {
+        font-size: 14px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            display: none;
+        }
+
+        #nav-logo,
+        #nav-button {
+            margin: 0 1rem;
+            display: block !important;
+
+            a {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 1rem 1rem;
+    }
+
     .hero {
         flex-direction: column;
         justify-content: center;
@@ -121,8 +156,7 @@
         }
 
         .graphics-container {
-            width: 100%;
-            padding: 50px 0;
+            display: flex;
         }
 
         &__shapes {
@@ -131,10 +165,34 @@
 
         &__illus {
             @include abs-center;
+            padding: 2rem;
         }
     }
+}
 
-    .green-button {
+@include media-breakpoint('md') {
+    html {
+        font-size: 12px;
+    }
 
+    .card {
+        .wrapper {
+            display: block;
+        }
+
+        &__logo, &__img {
+            display: block;
+            margin: 1rem auto;
+        }
+
+        &__header {
+            text-align: center;
+        }
+    }
+}
+
+@include media-breakpoint('sm') {
+    html {
+        font-size: 10px;
     }
 }

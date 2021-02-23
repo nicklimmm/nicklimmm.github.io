@@ -1,14 +1,8 @@
+@use 'map';
+
 @mixin full-width-dark {
     width: 100%;
     background-color: $dark4;
-}
-
-@mixin min-margin {
-    margin: 5px 5px 5px 5px;
-}
-
-@mixin med-margin {
-    margin: 10px 10px 10px 10px;
 }
 
 @mixin reset {
@@ -29,8 +23,14 @@
     text-align: center;
 }
 
+@mixin media-breakpoint($width-class, $breakpoints: $grid-breakpoints) {
+    @media only screen and (max-width: map-get($breakpoints, $width-class)) {
+        @content;
+    }
+}
 
-// animation mixins
+
+// Animation mixins
 @mixin fade-in-down($duration, $delay: 0) {
     animation: fadeInDown;
     animation-duration: $duration;

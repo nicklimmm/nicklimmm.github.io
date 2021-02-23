@@ -102,33 +102,6 @@ section {
     }
 }
 
-@media only screen and (max-width: 500px) {
-    html {
-        font-size: 12px;
-    }
+// @media only screen and (max-width: 500px) {
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        li {
-            display: none;
-        }
-
-        #nav-logo,
-        #nav-button {
-            margin: 0 1rem;
-            display: block !important;
-
-            a {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    footer {
-        padding: 1rem 1rem;
-    }
-}
+// }
