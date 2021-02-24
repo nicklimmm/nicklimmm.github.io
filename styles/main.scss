@@ -6,6 +6,10 @@
 @import "scss/mixins";
 @import "scss/base";
 
+.cf-logo img {
+    height: 1.8rem;
+    vertical-align: bottom;
+}
 
 .hero {
     display: flex;
@@ -93,7 +97,7 @@
         }
 
         p {
-            margin: 0.7rem 0;
+            margin: 1.2rem 0;
         }
     }
 }

@@ -155,10 +155,17 @@ footer .sub-footer .icons li a {
 
 section {
   padding: 0 12vw;
+  margin: 4rem 0;
 }
 
 section .title {
   font-size: 2rem;
+  text-align: center;
+}
+
+.cf-logo img {
+  height: 1.8rem;
+  vertical-align: bottom;
 }
 
 .hero {
@@ -268,7 +275,7 @@ section .title {
 }
 
 .card__desc p {
-  margin: 0.7rem 0;
+  margin: 1.2rem 0;
 }
 
 .green-button {
