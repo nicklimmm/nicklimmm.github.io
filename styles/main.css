@@ -1,21 +1,4 @@
 @use '/styles/tools/animate.css';
-@-webkit-keyframes light-up {
-  from {
-    padding: 2em 4em 2em 4em;
-  }
-  to {
-    padding: calc(2em - 6px) 4em 2em 4em;
-  }
-}
-@keyframes light-up {
-  from {
-    padding: 2em 4em 2em 4em;
-  }
-  to {
-    padding: calc(2em - 6px) 4em 2em 4em;
-  }
-}
-
 @-webkit-keyframes show-up {
   from {
     opacity: 0;
@@ -24,13 +7,56 @@
     opacity: 1;
   }
 }
-
 @keyframes show-up {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes button-hover {
+  100% {
+    color: white;
+    background-color: #6400E4;
+  }
+}
+
+@keyframes button-hover {
+  100% {
+    color: white;
+    background-color: #6400E4;
   }
 }
 
@@ -47,7 +73,6 @@
 }
 
 @use 'sass:list';
-@use 'map';
 html {
   top: 0;
   left: 0;
@@ -155,7 +180,7 @@ footer .sub-footer .icons li a {
 
 section {
   padding: 0 12vw;
-  margin: 4rem 0;
+  margin-bottom: 4rem;
 }
 
 section .title {
@@ -166,6 +191,11 @@ section .title {
 .cf-logo img {
   height: 1.8rem;
   vertical-align: bottom;
+}
+
+.cf-logo img:hover {
+  -webkit-filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
+          filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
 }
 
 .hero {
@@ -212,6 +242,14 @@ section .title {
 }
 
 .hero .graphics-container {
+  -webkit-animation: floating;
+          animation: floating;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   position: relative;
 }
 
@@ -278,19 +316,25 @@ section .title {
   margin: 1.2rem 0;
 }
 
-.green-button {
-  background-color: #5CE30B;
+.button {
+  display: inline-block;
   font-size: 1.1rem;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  border-radius: 20px;
-  padding: 0.6rem 1.3rem;
+  border: 3px solid #6400E4;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.3rem;
   text-decoration: none;
-  border: none;
 }
 
-.green-button a:hover {
-  color: black;
+.button:hover {
+  -webkit-animation: button-hover;
+          animation: button-hover;
+  -webkit-animation-duration: 150ms;
+          animation-duration: 150ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @media only screen and (max-width: 992px) {
@@ -379,6 +423,13 @@ section .title {
 @media only screen and (max-width: 576px) {
   html {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+  .hero {
+    padding-top: 2rem;
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

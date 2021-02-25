@@ -1,14 +1,3 @@
-@keyframes light-up {
-    from {
-        // border-top: 3px solid $white;
-        padding: 2em 4em 2em 4em;
-    }
-    to {
-        // border-top: 6px solid $violet;
-        padding: calc(2em - 6px) 4em 2em 4em;
-    }
-}
-
 @keyframes show-up {
     from {
         opacity: 0;
@@ -19,6 +8,60 @@
     }
 }
 
+@keyframes floating {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes button-hover {
+    100% {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+// Animation mixins
+@mixin fade-in-down($duration, $delay: 0) {
+    animation: fadeInDown;
+    animation-duration: $duration;
+    animation-delay: $delay;
+}
+
+@mixin show-up($duration, $delay: 0) {
+    opacity: 0;
+    animation-name: show-up;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}
+
+@mixin breathing($duration, $delay: 0, $count: infinite) {
+    animation: heartBeat;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-iteration-count: $count;
+}
+
+@mixin floating($duration, $delay: 0, $count: infinite) {
+    animation: floating;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-iteration-count: $count;
+}
+
+@mixin button-hover($duration) {
+    animation: button-hover;
+    animation-duration: $duration;
+    animation-fill-mode: forwards;
+}
+
 .grow {
     transition: transform 0.2s;
 
@@ -27,6 +70,3 @@
     }
 }
 
-// .light-up {
-//     animation: light-up, 50ms, both, alternate;
-// }

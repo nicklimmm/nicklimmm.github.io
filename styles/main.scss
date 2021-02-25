@@ -7,196 +7,209 @@
 @import "scss/base";
 
 .cf-logo img {
-    height: 1.8rem;
-    vertical-align: bottom;
+  height: 1.8rem;
+  vertical-align: bottom;
+
+  &:hover {
+    filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg)
+      brightness(81%) contrast(129%);
+  }
 }
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    height: 100vh;
+  height: 100vh;
 
+  position: relative;
+
+  &__text {
+    margin-bottom: 25px;
+    &--title h1 {
+      @include fade-in-down(2.5s);
+      font-weight: 700;
+      font-size: 4rem;
+    }
+
+    &--desc p {
+      @include show-up(2.5s, 2.5s);
+
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+  }
+
+  .graphics-container {
+    @include floating(5s);
     position: relative;
+  }
 
-    &__text {
-        margin-bottom: 25px;
-        &--title h1 {
-            @include fade-in-down(2.5s);
-            font-weight: 700;
-            font-size: 4rem;
-        }
+  &__illus {
+    height: 16rem;
+  }
 
-        &--desc p {
-            @include show-up(2.5s, 2.5s);
+  &__shapes {
+    position: absolute;
+    left: 15rem;
+    top: -7rem;
 
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
+    height: 12rem;
+  }
+
+  &__bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: auto 0 0 0;
     }
-
-    .graphics-container {
-        position: relative;
-    }
-
-    &__illus {
-        height: 16rem;
-    }
-
-    &__shapes {
-        position: absolute;
-        left: 15rem;
-        top: -7rem;
-
-        height: 12rem;
-    }
-
-    &__bg {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-
-        img {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            margin: auto 0 0 0;
-        }
-    }
+  }
 }
 
 .card {
-    margin: 2rem 0;
-    padding: 1.5rem 4rem;
-    box-shadow: 5px 5px 4px -3px black;
-    border: 2px solid black;
-    border-radius: 12px;
+  margin: 2rem 0;
+  padding: 1.5rem 4rem;
+  box-shadow: 5px 5px 4px -3px black;
+  border: 2px solid black;
+  border-radius: 12px;
 
-    .wrapper {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__logo,
+  &__img {
+    height: 8rem;
+    margin-right: 2rem;
+  }
+
+  &__header {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  &__desc {
+    li {
+      margin: 0.3rem 0;
     }
 
-    &__logo, &__img {
-        height: 8rem;
-        margin-right: 2rem;
+    p {
+      margin: 1.2rem 0;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+
+  font-size: 1.1rem;
+  font-family: $font;
+  font-weight: 600;
+
+  border: 3px solid $primary;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.3rem;
+  text-decoration: none;
+
+  &:hover {
+    @include button-hover(150ms);
+  }
+}
+
+@include media-breakpoint("lg", "w") {
+  html {
+    font-size: 14px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    li {
+      display: none;
+    }
+
+    #nav-logo,
+    #nav-button {
+      margin: 0 1rem;
+      display: block !important;
+
+      a {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  footer {
+    padding: 1rem 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    &__text {
+      text-align: center;
+    }
+
+    .graphics-container {
+      display: flex;
+    }
+
+    &__shapes {
+      display: none;
+    }
+
+    &__illus {
+      @include abs-center;
+      padding: 2rem;
+    }
+  }
+}
+
+@include media-breakpoint("md", "w") {
+  html {
+    font-size: 12px;
+  }
+
+  .card {
+    .wrapper {
+      display: block;
+    }
+
+    &__logo,
+    &__img {
+      display: block;
+      margin: 1rem auto;
     }
 
     &__header {
-        font-weight: 500;
-        font-style: italic;
-        font-size: 1rem;
+      text-align: center;
     }
-
-    &__desc {
-        li {
-            margin: 0.3rem 0;
-        }
-
-        p {
-            margin: 1.2rem 0;
-        }
-    }
+  }
 }
 
-
-.green-button {
-    background-color: $secondary;
-
-    font-size: 1.1rem;
-    font-family: $font;
-    font-weight: 600;
-
-    border-radius: 20px;
-    padding: 0.6rem 1.3rem;
-    text-decoration: none;
-    border: none;
-
-    a:hover {
-        color: black;
-    }
+@include media-breakpoint("sm", "w") {
+  html {
+    font-size: 10px;
+  }
 }
 
-
-@include media-breakpoint('lg') {
-
-    html {
-        font-size: 14px;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        li {
-            display: none;
-        }
-
-        #nav-logo,
-        #nav-button {
-            margin: 0 1rem;
-            display: block !important;
-
-            a {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    footer {
-        padding: 1rem 1rem;
-    }
-
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        &__text {
-            text-align: center;
-        }
-
-        .graphics-container {
-            display: flex;
-        }
-
-        &__shapes {
-            display: none;
-        }
-
-        &__illus {
-            @include abs-center;
-            padding: 2rem;
-        }
-    }
-}
-
-@include media-breakpoint('md') {
-    html {
-        font-size: 12px;
-    }
-
-    .card {
-        .wrapper {
-            display: block;
-        }
-
-        &__logo, &__img {
-            display: block;
-            margin: 1rem auto;
-        }
-
-        &__header {
-            text-align: center;
-        }
-    }
-}
-
-@include media-breakpoint('sm') {
-    html {
-        font-size: 10px;
-    }
+@include media-breakpoint("md", "h") {
+  .hero {
+    padding-top: 2rem;
+    height: auto;
+  }
 }

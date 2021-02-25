@@ -1,4 +1,4 @@
-@use 'map';
+// @use 'map';
 
 @mixin full-width-dark {
     width: 100%;
@@ -23,31 +23,18 @@
     text-align: center;
 }
 
-@mixin media-breakpoint($width-class, $breakpoints: $grid-breakpoints) {
-    @media only screen and (max-width: map-get($breakpoints, $width-class)) {
-        @content;
+@mixin media-breakpoint($class, $orient, $breakpoints: $grid-breakpoints) {
+    @if $orient == "w" {
+        @media only screen and (max-width: map-get($breakpoints, $class)) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (max-height: map-get($breakpoints, $class)) {
+            @content;
+        }
     }
 }
 
 
-// Animation mixins
-@mixin fade-in-down($duration, $delay: 0) {
-    animation: fadeInDown;
-    animation-duration: $duration;
-    animation-delay: $delay;
-}
-
-@mixin show-up($duration, $delay: 0) {
-    opacity: 0;
-    animation-name: show-up;
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-fill-mode: forwards;
-}
-
-@mixin breathing($duration, $delay: 0, $count: infinite) {
-    animation: heartBeat;
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-iteration-count: $count;
-}
