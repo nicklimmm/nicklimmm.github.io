@@ -179,8 +179,7 @@ footer .sub-footer .icons li a {
 }
 
 section {
-  padding: 0 12vw;
-  margin-bottom: 4rem;
+  padding: 4rem 12vw 0 12vw;
 }
 
 section .title {
@@ -331,8 +330,8 @@ section .title {
 .button:hover {
   -webkit-animation: button-hover;
           animation: button-hover;
-  -webkit-animation-duration: 150ms;
-          animation-duration: 150ms;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -381,10 +380,8 @@ section .title {
   .hero__text {
     text-align: center;
   }
-  .hero .graphics-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .hero-container {
+    text-align: center;
   }
   .hero__shapes {
     display: none;
@@ -400,7 +397,7 @@ section .title {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
   }
 }
 
@@ -423,13 +420,6 @@ section .title {
 @media only screen and (max-width: 576px) {
   html {
     font-size: 10px;
-  }
-}
-
-@media only screen and (max-height: 768px) {
-  .hero {
-    padding-top: 2rem;
-    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -123,7 +123,7 @@
   text-decoration: none;
 
   &:hover {
-    @include button-hover(150ms);
+    @include button-hover(250ms);
   }
 }
 
@@ -164,8 +164,8 @@
       text-align: center;
     }
 
-    .graphics-container {
-      display: flex;
+    &-container {
+      text-align: center;
     }
 
     &__shapes {
@@ -174,7 +174,7 @@
 
     &__illus {
       @include abs-center;
-      padding: 2rem;
+      padding: 3rem;
     }
   }
 }
@@ -209,7 +209,7 @@
 
 @include media-breakpoint("md", "h") {
   .hero {
-    padding-top: 2rem;
-    height: auto;
+    // padding-top: 2rem;
+    // height: auto;
   }
 }
