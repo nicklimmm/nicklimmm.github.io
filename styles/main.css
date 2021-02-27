@@ -120,11 +120,13 @@ header nav {
 header nav ul {
   list-style-type: none;
   overflow: hidden;
-  padding: 1.5rem 3.5rem;
+  padding: 1rem 3rem;
+  height: 4rem;
 }
 
 header nav ul li {
   float: left;
+  line-height: 2rem;
 }
 
 header nav ul li a {
@@ -364,6 +366,7 @@ section .title {
   nav ul #nav-button a {
     margin: 0;
     font-size: 1.2rem;
+    line-height: 2rem;
   }
   footer {
     padding: 1rem 1rem;
@@ -417,9 +420,19 @@ section .title {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-height: 576px) {
+  .hero {
+    height: auto;
+  }
+  .hero-container {
+    height: 100vh;
+    padding: 3.4rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

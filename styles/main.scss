@@ -149,6 +149,7 @@
       a {
         margin: 0;
         font-size: 1.2rem;
+        line-height: 2rem;
       }
     }
   }
@@ -201,15 +202,18 @@
   }
 }
 
-@include media-breakpoint("sm", "w") {
+@include media-breakpoint("xs", "w") {
   html {
     font-size: 10px;
   }
 }
 
-@include media-breakpoint("md", "h") {
+@include media-breakpoint("sm", "h") {
   .hero {
-    // padding-top: 2rem;
-    // height: auto;
+    height: auto;
+    &-container {
+      height: 100vh;
+      padding: 3.4rem 0;
+    }
   }
 }
