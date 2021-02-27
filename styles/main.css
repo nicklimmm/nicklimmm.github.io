@@ -124,14 +124,19 @@ header nav ul {
   height: 4rem;
 }
 
-header nav ul li {
+header nav ul .nav-link {
   float: left;
   line-height: 2rem;
+  margin: 0 1rem;
+  padding: 0 0.5rem;
 }
 
-header nav ul li a {
+header nav ul .nav-link:hover {
+  border-bottom: 2px solid #6400E4;
+}
+
+header nav ul .nav-link a {
   font-weight: 500;
-  margin: 14px 22px;
 }
 
 header nav ul #nav-logo {
@@ -180,6 +185,16 @@ footer .sub-footer .icons li a {
   font-size: 1.8rem;
 }
 
+footer .sub-footer .icons li #cf-logo img {
+  height: 1.8rem;
+  vertical-align: bottom;
+}
+
+footer .sub-footer .icons li #cf-logo img:hover {
+  -webkit-filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
+          filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
+}
+
 section {
   padding: 4rem 12vw 0 12vw;
 }
@@ -187,16 +202,6 @@ section {
 section .title {
   font-size: 2rem;
   text-align: center;
-}
-
-.cf-logo img {
-  height: 1.8rem;
-  vertical-align: bottom;
-}
-
-.cf-logo img:hover {
-  -webkit-filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
-          filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
 }
 
 .hero {

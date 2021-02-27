@@ -42,13 +42,18 @@ header nav {
         padding: 1rem 3rem;
         height: 4rem;
 
-        li {
+        .nav-link {
             float: left;
             line-height: 2rem;
+            margin: 0 1rem;
+            padding: 0 0.5rem;
+
+            &:hover {
+                border-bottom: 2px solid $primary;
+            }
 
             a {
                 font-weight: 500;
-                margin: 14px 22px;
             }
         }
 
@@ -91,6 +96,16 @@ footer {
 
                 a {
                     font-size: 1.8rem;
+                }
+
+                #cf-logo img {
+                    height: 1.8rem;
+                    vertical-align: bottom;
+                
+                    &:hover {
+                    filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg)
+                        brightness(81%) contrast(129%);
+                    }
                 }
             }
         }

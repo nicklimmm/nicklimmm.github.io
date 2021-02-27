@@ -6,15 +6,6 @@
 @import "scss/mixins";
 @import "scss/base";
 
-.cf-logo img {
-  height: 1.8rem;
-  vertical-align: bottom;
-
-  &:hover {
-    filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg)
-      brightness(81%) contrast(129%);
-  }
-}
 
 .hero {
   display: flex;
