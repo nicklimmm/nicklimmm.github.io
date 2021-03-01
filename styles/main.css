@@ -60,6 +60,46 @@
   }
 }
 
+@-webkit-keyframes come-and-go {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes come-and-go {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
 .grow {
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -257,6 +297,32 @@ section .title {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   position: relative;
+}
+
+.hero .hero-notice {
+  -webkit-animation: come-and-go;
+          animation: come-and-go;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero .hero-notice h1 {
+  text-align: center;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.hero .hero-notice__illus {
+  margin: 2rem;
+  height: 12rem;
 }
 
 .hero__illus {

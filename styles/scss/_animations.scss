@@ -27,6 +27,26 @@
     }
 }
 
+@keyframes come-and-go {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+
 // Animation mixins
 @mixin fade-in-down($duration, $delay: 0) {
     animation: fadeInDown;
@@ -59,6 +79,13 @@
 @mixin button-hover($duration) {
     animation: button-hover;
     animation-duration: $duration;
+    animation-fill-mode: forwards;
+}
+
+@mixin come-and-go($duration, $delay: 0) {
+    animation: come-and-go;
+    animation-duration: $duration;
+    animation-delay: $delay;
     animation-fill-mode: forwards;
 }
 

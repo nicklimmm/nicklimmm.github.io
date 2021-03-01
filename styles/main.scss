@@ -18,6 +18,7 @@
 
   &__text {
     margin-bottom: 25px;
+
     &--title h1 {
       @include fade-in-down(2.5s);
       font-weight: 700;
@@ -35,6 +36,23 @@
   .graphics-container {
     @include floating(5s);
     position: relative;
+  }
+
+  .hero-notice {
+    @include come-and-go(30s);
+    position: absolute;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      line-height: 2rem;
+    }
+    &__illus {
+      margin: 2rem;
+      height: 12rem;
+    }
   }
 
   &__illus {
