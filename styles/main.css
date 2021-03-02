@@ -176,6 +176,8 @@ header nav ul .nav-link:hover {
 }
 
 header nav ul .nav-link a {
+  display: block;
+  height: 100%;
   font-weight: 500;
 }
 
@@ -398,6 +400,7 @@ section .title {
   margin: 0.5rem 0;
   padding: 0.5rem 1.3rem;
   text-decoration: none;
+  background-color: white;
 }
 
 .button:hover {
@@ -407,6 +410,65 @@ section .title {
           animation-duration: 250ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.contact-form input[type=text] {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 0.7rem center;
+  padding-left: 2.2rem;
+  background-image: url("/images/vectors/person.svg");
+}
+
+.contact-form input[type=text]:focus {
+  border: 2px solid #6400E4;
+}
+
+.contact-form input[type=email] {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 0.7rem center;
+  padding-left: 2.2rem;
+  background-image: url("/images/vectors/envelope.svg");
+}
+
+.contact-form input[type=email]:focus {
+  border: 2px solid #6400E4;
+}
+
+.contact-form textarea {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: 0.7rem center;
+  height: 10rem;
+}
+
+.contact-form textarea:focus {
+  border: 2px solid #6400E4;
 }
 
 @media only screen and (max-width: 992px) {
@@ -440,7 +502,7 @@ section .title {
     line-height: 2rem;
   }
   footer {
-    padding: 1rem 1rem;
+    padding: 1rem 6rem;
   }
   .hero {
     -webkit-box-orient: vertical;
@@ -479,6 +541,9 @@ section .title {
   html {
     font-size: 12px;
   }
+  footer {
+    padding: 1rem 2.5rem;
+  }
   .card .wrapper {
     display: block;
   }
@@ -494,6 +559,9 @@ section .title {
 @media only screen and (max-width: 375px) {
   html {
     font-size: 10px;
+  }
+  footer {
+    padding: 1rem 2rem;
   }
 }
 

@@ -23,6 +23,31 @@
     text-align: center;
 }
 
+@mixin input-field($with-icon: true) {
+    font-size: 1rem;
+    font-family: inherit;
+
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0 1rem 0;
+    width: 100%;
+    resize: none;
+
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    background-repeat: no-repeat;
+    background-position: 0.7rem center;
+
+    @if ($with-icon) {
+        padding-left: 2.2rem;
+    }
+
+    &:focus {
+      border: 2px solid $primary;
+    }
+}
+
 @mixin media-breakpoint($class, $orient, $breakpoints: $grid-breakpoints) {
     @if $orient == "w" {
         @media only screen and (max-width: map-get($breakpoints, $class)) {

@@ -131,8 +131,27 @@
   padding: 0.5rem 1.3rem;
   text-decoration: none;
 
+  background-color: white;
+
   &:hover {
     @include button-hover(250ms);
+  }
+}
+
+.contact-form {
+  input[type=text] {
+    @include input-field($with-icon: true);
+    background-image: url('/images/vectors/person.svg');
+  }
+
+  input[type=email] {
+    @include input-field($with-icon: true);
+    background-image: url('/images/vectors/envelope.svg');
+  }
+
+  textarea {
+    @include input-field($with-icon: false);
+    height: 10rem;
   }
 }
 
@@ -164,7 +183,7 @@
   }
 
   footer {
-    padding: 1rem 1rem;
+    padding: 1rem 6rem;
   }
 
   .hero {
@@ -194,6 +213,10 @@
     font-size: 12px;
   }
 
+  footer {
+    padding: 1rem 2.5rem;
+  }
+
   .card {
     .wrapper {
       display: block;
@@ -211,11 +234,16 @@
   }
 }
 
+
 @include media-breakpoint("xs", "w") {
   html {
     font-size: 10px;
   }
+  footer {
+    padding: 1rem 2rem;
+  }
 }
+
 
 @include media-breakpoint("sm", "h") {
   .hero {
