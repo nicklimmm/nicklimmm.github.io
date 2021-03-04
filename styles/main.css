@@ -412,11 +412,15 @@ section .title {
           animation-fill-mode: forwards;
 }
 
+.contact-form__header {
+  margin-bottom: 0.7rem;
+}
+
 .contact-form input[type=text] {
   font-size: 1rem;
   font-family: inherit;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0 1rem 0;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 0.5rem 0;
   width: 100%;
   resize: none;
   outline: none;
@@ -424,7 +428,7 @@ section .title {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: 0.7rem center;
-  padding-left: 2.2rem;
+  padding-left: 2.3rem;
   background-image: url("/images/vectors/person.svg");
 }
 
@@ -435,8 +439,8 @@ section .title {
 .contact-form input[type=email] {
   font-size: 1rem;
   font-family: inherit;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0 1rem 0;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 0.5rem 0;
   width: 100%;
   resize: none;
   outline: none;
@@ -444,7 +448,7 @@ section .title {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: 0.7rem center;
-  padding-left: 2.2rem;
+  padding-left: 2.3rem;
   background-image: url("/images/vectors/envelope.svg");
 }
 
@@ -455,8 +459,8 @@ section .title {
 .contact-form textarea {
   font-size: 1rem;
   font-family: inherit;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0 1rem 0;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 0.5rem 0;
   width: 100%;
   resize: none;
   outline: none;
@@ -464,7 +468,7 @@ section .title {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: 0.7rem center;
-  height: 10rem;
+  height: 12rem;
 }
 
 .contact-form textarea:focus {

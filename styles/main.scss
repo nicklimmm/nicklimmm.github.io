@@ -139,6 +139,9 @@
 }
 
 .contact-form {
+  &__header {
+    margin-bottom: 0.7rem;
+  }
   input[type=text] {
     @include input-field($with-icon: true);
     background-image: url('/images/vectors/person.svg');
@@ -151,7 +154,7 @@
 
   textarea {
     @include input-field($with-icon: false);
-    height: 10rem;
+    height: 12rem;
   }
 }
 
