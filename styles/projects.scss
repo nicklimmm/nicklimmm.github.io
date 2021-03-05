@@ -1,0 +1,18 @@
+@use '/styles/tools/animate.css';
+
+@import "scss/variables";
+@import "scss/animations";
+@import "scss/helpers";
+@import "scss/mixins";
+@import "scss/base";
+
+.hero {
+    justify-content: space-evenly;
+    &__text {
+        margin-left: 4rem;
+        
+        &--title h1 {
+            font-size: 3.5rem;
+        }
+    }
+}

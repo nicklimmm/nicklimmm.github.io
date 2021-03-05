@@ -48,7 +48,7 @@ header nav {
             margin: 0 1rem;
             padding: 0 0.5rem;
 
-            &:hover {
+            &:hover, &--active {
                 border-bottom: 2px solid $primary;
             }
 
@@ -61,6 +61,7 @@ header nav {
 
         #nav-logo {
             float: right;
+            font-weight: 500;
         }
 
         #nav-button {

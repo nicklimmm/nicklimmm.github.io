@@ -1,0 +1,263 @@
+@use '/styles/tools/animate.css';
+@-webkit-keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes button-hover {
+  100% {
+    color: white;
+    background-color: #6400E4;
+  }
+}
+
+@keyframes button-hover {
+  100% {
+    color: white;
+    background-color: #6400E4;
+  }
+}
+
+@-webkit-keyframes come-and-go {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes come-and-go {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.grow {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@use 'sass:list';
+html {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Montserrat, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #6400E4;
+}
+
+header nav {
+  z-index: 2000;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 4px 0px black;
+          box-shadow: 0px 1px 4px 0px black;
+}
+
+header nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 1rem 3rem;
+  height: 4rem;
+}
+
+header nav ul .nav-link {
+  float: left;
+  line-height: 2rem;
+  margin: 0 1rem;
+  padding: 0 0.5rem;
+}
+
+header nav ul .nav-link:hover, header nav ul .nav-link--active {
+  border-bottom: 2px solid #6400E4;
+}
+
+header nav ul .nav-link a {
+  display: block;
+  height: 100%;
+  font-weight: 500;
+}
+
+header nav ul #nav-logo {
+  float: right;
+  font-weight: 500;
+}
+
+header nav ul #nav-button {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 8rem;
+}
+
+footer .sub-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+  padding: 0 2rem;
+  border-top: 1px solid black;
+}
+
+footer .sub-footer .copyright {
+  font-weight: 500;
+}
+
+footer .sub-footer .icons {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+footer .sub-footer .icons li {
+  float: left;
+  margin: 8px;
+}
+
+footer .sub-footer .icons li a {
+  font-size: 1.8rem;
+}
+
+footer .sub-footer .icons li #cf-logo img {
+  height: 1.8rem;
+  vertical-align: bottom;
+}
+
+footer .sub-footer .icons li #cf-logo img:hover {
+  -webkit-filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
+          filter: invert(15%) sepia(79%) saturate(7255%) hue-rotate(269deg) brightness(81%) contrast(129%);
+}
+
+section {
+  padding: 4rem 12vw 0 12vw;
+}
+
+section .title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hero {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hero__text {
+  margin-left: 4rem;
+}
+
+.hero__text--title h1 {
+  font-size: 3.5rem;
+}
+/*# sourceMappingURL=projects.css.map */

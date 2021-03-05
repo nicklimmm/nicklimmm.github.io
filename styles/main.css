@@ -171,7 +171,7 @@ header nav ul .nav-link {
   padding: 0 0.5rem;
 }
 
-header nav ul .nav-link:hover {
+header nav ul .nav-link:hover, header nav ul .nav-link--active {
   border-bottom: 2px solid #6400E4;
 }
 
@@ -183,6 +183,7 @@ header nav ul .nav-link a {
 
 header nav ul #nav-logo {
   float: right;
+  font-weight: 500;
 }
 
 header nav ul #nav-button {
