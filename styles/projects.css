@@ -260,4 +260,25 @@ section .title {
 .hero__text--title h1 {
   font-size: 3.5rem;
 }
+
+.projects .card__header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.projects .card__subheader {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.projects .card a {
+  color: #236EE2;
+}
+
+.projects .card a:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=projects.css.map */

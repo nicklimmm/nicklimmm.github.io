@@ -16,3 +16,26 @@
         }
     }
 }
+
+.projects .card {
+    &__header {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    &__subheader {
+        font-size: 1rem;
+        font-weight: 500;
+        font-style: italic;
+        margin: 1rem 0;
+    }
+
+    a {
+        color: #236EE2;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
