@@ -54,6 +54,12 @@
     animation-delay: $delay;
 }
 
+@mixin slide-in-right($duration, $delay: 0) {
+    animation: slideInRight;
+    animation-duration: $duration;
+    animation-delay: $delay;
+}
+
 @mixin show-up($duration, $delay: 0) {
     opacity: 0;
     animation-name: show-up;

@@ -190,6 +190,10 @@ header nav ul #nav-button {
   display: none;
 }
 
+header nav ul #nav-button:hover {
+  border: none;
+}
+
 footer {
   width: 100%;
   padding: 1rem 8rem;
@@ -302,7 +306,7 @@ section .title {
   position: relative;
 }
 
-.hero .hero-notice {
+.hero-notice {
   -webkit-animation: come-and-go;
           animation: come-and-go;
   -webkit-animation-duration: 30s;
@@ -317,13 +321,13 @@ section .title {
   text-align: center;
 }
 
-.hero .hero-notice h1 {
+.hero-notice h1 {
   text-align: center;
   font-weight: 600;
   line-height: 2rem;
 }
 
-.hero .hero-notice__illus {
+.hero-notice__illus {
   margin: 2rem;
   height: 12rem;
 }
@@ -384,11 +388,12 @@ section .title {
 }
 
 .card__desc li {
-  margin: 0.3rem 0;
+  margin: 0.4rem 0;
 }
 
 .card__desc p {
-  margin: 1.2rem 0;
+  margin: 1.3rem 0;
+  line-height: 20px;
 }
 
 .button {

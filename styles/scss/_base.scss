@@ -66,6 +66,10 @@ header nav {
 
         #nav-button {
             display: none;
+
+            &:hover {
+                border: none;
+            }
         }
     }
 }

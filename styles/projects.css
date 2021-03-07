@@ -190,6 +190,10 @@ header nav ul #nav-button {
   display: none;
 }
 
+header nav ul #nav-button:hover {
+  border: none;
+}
+
 footer {
   width: 100%;
   padding: 1rem 8rem;
@@ -258,7 +262,13 @@ section .title {
 }
 
 .hero__text--title h1 {
-  font-size: 3.5rem;
+  -webkit-animation: slideInRight;
+          animation: slideInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  font-size: 3rem;
 }
 
 .projects .card__header {
@@ -280,5 +290,24 @@ section .title {
 
 .projects .card a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+  .hero-container {
+    margin-top: -12rem;
+  }
+  .hero__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

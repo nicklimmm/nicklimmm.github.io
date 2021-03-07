@@ -12,7 +12,8 @@
         margin-left: 4rem;
         
         &--title h1 {
-            font-size: 3.5rem;
+            @include slide-in-right(2s);
+            font-size: 3rem;
         }
     }
 }
@@ -36,6 +37,18 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+@include media-breakpoint('lg', 'w') {
+    .hero {
+        &-container {
+            margin-top: -12rem;
+        }
+        &__text {
+            @include abs-center;
+            margin-left: 0;
         }
     }
 }
