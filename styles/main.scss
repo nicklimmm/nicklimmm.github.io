@@ -1,5 +1,6 @@
 @use '/styles/tools/animate.css';
 
+@import "scss/fonts";
 @import "scss/variables";
 @import "scss/animations";
 @import "scss/helpers";
@@ -66,20 +67,6 @@
 
     height: 12rem;
   }
-
-  &__bg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-
-    img {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      margin: auto 0 0 0;
-    }
-  }
 }
 
 .card {
@@ -117,6 +104,16 @@
       line-height: 20px;
     }
   }
+}
+
+.achievements .card .card__desc li {
+  a {
+    color: #236EE2;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 }
 
 .button {
