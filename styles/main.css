@@ -744,6 +744,9 @@ section .title {
   html {
     font-size: 12px;
   }
+  section {
+    padding: 4rem 7vw 0 7vw;
+  }
   footer {
     padding: 1rem 2.5rem;
   }
