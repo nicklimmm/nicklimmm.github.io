@@ -215,7 +215,7 @@
   }
 
   section {
-    padding: 4rem 7vw 0 7vw;
+    padding: 4rem 8vw 0 8vw;
   }
 
   footer {
@@ -223,6 +223,8 @@
   }
 
   .card {
+    padding: 1.5rem 2rem;
+
     .wrapper {
       display: block;
     }
@@ -241,9 +243,6 @@
 
 
 @include media-breakpoint("xs", "w") {
-  html {
-    font-size: 10px;
-  }
   footer {
     padding: 1rem 2rem;
   }
