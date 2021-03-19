@@ -542,6 +542,16 @@ section .title {
   height: 12rem;
 }
 
+.hero__bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 81%, 50% 95%, 0 81%, 0 0);
+          clip-path: polygon(100% 0, 100% 81%, 50% 95%, 0 81%, 0 0);
+  background-color: yellow;
+}
+
 .card {
   margin: 2rem 0;
   padding: 1.5rem 4rem;

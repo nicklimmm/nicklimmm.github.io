@@ -67,6 +67,16 @@
 
     height: 12rem;
   }
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    
+    clip-path: polygon(100% 0, 100% 81%, 50% 95%, 0 81%, 0 0);
+    background-color: yellow;
+  }
 }
 
 .card {
