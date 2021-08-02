@@ -4,3 +4,6 @@ styles/scratch.scss
 styles/scratch.css
 styles/scratch.css.map
 scripts/contact-form.php
+
+node_modules
+.cache
