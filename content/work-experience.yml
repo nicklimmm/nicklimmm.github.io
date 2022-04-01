@@ -1,0 +1,27 @@
+title: Work Experience
+content:
+  - employer: Nanyang Technological University, School of Humanities
+    position: Research Assitant (Web Developer), Part-Time
+    date: Jul 2021 - Present
+    description:
+      - Developed a responsive website using WordPress and Formidable Forms for research purposes
+      - Collaborated with both research and technical team to deliver website as intended
+
+  - employer:
+    position: Coding Tutor
+    date: Mar 2021 - Present
+    description:
+      - Mentored students to create personal projects, ranging from CLI applications to websites
+      - Taught students Python, HTML/CSS/JS, React, NodeJS and MySQL remotely through Zoom
+
+  - employer:
+    position: Peer Tutor, Part-Time
+    date:
+    description:
+      - MH1810
+
+  - employer:
+    position: Math Olympiad Tutor
+    date:
+    description:
+      -
