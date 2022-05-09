@@ -4,6 +4,7 @@ import "animate.css";
 import { Education } from "../components/Education";
 import { WorkExperience } from "../components/WorkExperience";
 import { Ccas } from "../components/Ccas";
+import { Projects } from "../components/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Education />
       <WorkExperience />
       <Ccas />
+      <Projects />
     </Layout>
   );
 }
