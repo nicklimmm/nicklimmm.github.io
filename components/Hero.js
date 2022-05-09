@@ -9,9 +9,9 @@ import {
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen flex md:flex-row flex-col items-center justify-center">
-      <div className="md:w-7/12 md:text-left text-center my-3">
-        <h1 className="text-6xl font-semibold my-4">Hi! I'm Nicky!</h1>
+    <div className="relative lg:px-24 px-12 min-h-screen flex md:flex-row flex-col items-center justify-center">
+      <div className="md:w-7/12 md:text-left text-center my-3 ml-8">
+        <h1 className="text-6xl font-semibold my-4">Hi! I&apos;m Nicky!</h1>
         <p className="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
           voluptates nesciunt, totam autem repellendus facere eaque eligendi
@@ -37,13 +37,13 @@ export const Hero = () => {
         </div>
       </div>
       <div className="md:w-5/12 md:my-0 my-4 flex justify-center">
-        <div className="w-64 h-64 bg-red-400 rounded-full flex items-center justify-center">
+        <div className="md:w-60 md:h-60 w-48 h-48 bg-red-400 rounded-full flex items-center justify-center">
           <Image
             src="/memoji.png"
             alt="memoji"
             layout="fixed"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
         </div>
       </div>
