@@ -1,23 +1,21 @@
-title: Co-Curricular Activities
-content:
-  - organisation: Nanyang Technological University Students' Union
-    position: Chairperson - Information and Technology Committee
-    date: Sep 2021 - Present
-    description:
-      - Reduced deployment cost by around 46% by optimizing AWS infrastructure
-      - Directed a team of 12 in migrating existing website from Django to React and Strapi
+- organisation: Nanyang Technological University Students' Union
+  position: Chairperson - Information and Technology Committee
+  date: Sep 2021 - Present
+  description:
+    - Reduced deployment cost by around 46% by optimizing AWS infrastructure
+    - Directed a team of 12 in migrating existing website from Django to React and Strapi
 
-  - organisation: Nanyang Technological University Students' Union
-    position: Officer - Information and Technology Committee
-    date: Sep 2020 - Sep 2021
-    description:
-      - Streamlined inventory management by implementing Inventory Management System in Django
-      - Led a CSS workshop with around 40 participants
+- organisation: Nanyang Technological University Students' Union
+  position: Officer - Information and Technology Committee
+  date: Sep 2020 - Sep 2021
+  description:
+    - Streamlined inventory management by implementing Inventory Management System in Django
+    - Led a CSS workshop with around 40 participants
 
-  - organisation: Hall V Orientation Committee
-    position: Publicity and Publications
-    date: Sep 2020 - Sep 2021
-    description:
-      - Designed orientation clan posters for Instagram posts and t-shirts for freshmen
-      - Facilitated freshmen in transitioning to university life
-      - Captured videos and photos during orientation
+- organisation: Hall V Orientation Committee
+  position: Publicity and Publications
+  date: Sep 2020 - Sep 2021
+  description:
+    - Designed orientation clan posters for Instagram posts and t-shirts for freshmen
+    - Facilitated freshmen in transitioning to university life
+    - Captured videos and photos during orientation
