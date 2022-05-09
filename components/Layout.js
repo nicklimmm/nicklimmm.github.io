@@ -26,7 +26,7 @@ export const Layout = ({
           </Link>
         </header> */}
 
-        <main className="lg:px-24 px-12">{children}</main>
+        <main>{children}</main>
 
         <footer className="bg-gray-900 text-gray-100 py-8 text-center">
           Copyright &copy; 2022 Nicky Lim

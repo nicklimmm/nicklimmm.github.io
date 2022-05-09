@@ -1,26 +1,22 @@
-title: Education
-content:
-  - school: Nanyang Technological University, Singapore
-    programme: Bachelor of Engineering (Computer Science)
-    date: Jul 2020 - Dec 2023 (Expected)
-    description:
-      - Expected Honours (Highest Distinction), Accelerated Bachelor Programme
-      - Achieved Distinction in Data Structures and Algorithms, Algorithm Design and Analysis
-      - Participated in NTU ICPC Training Team
+- school: Nanyang Technological University, Singapore
+  programme: Bachelor of Engineering (Computer Science)
+  date: Jul 2020 - Dec 2023 (Expected)
+  description:
+    - Expected Honours (Highest Distinction), Accelerated Bachelor Programme
+    - Achieved Distinction in Data Structures and Algorithms, Algorithm Design and Analysis
+    - Participated in NTU ICPC Training Team
 
-  - school: National University of Singapore, Singapore
-    programme: Singapore Universities Student Exchange Programme
-    date: Jan 2022 - May 2022
-    description:
-      -
+- school: National University of Singapore, Singapore
+  programme: Singapore Universities Student Exchange Programme
+  date: Jan 2022 - May 2022
 
-  - school: Sekolah Mondial, Batam, Indonesia
-    programme: Senior High School (Science Major)
-    date: Jul 2017 - Jun 2020
-    description:
-      - Ranked 3rd in the Class of 2020, Best in Mathematics for 3 consecutive years
-      - Mathematics Olympiad Medalist (2x Gold, 1x Silver, 3x Bronze from city to regionals)
-      - 2nd Place City-Level Physics Olympiad 2019
-      - 1st Place City-Level Basketball Competition 2019
-      - 1st Place City-Level Battle of the Bands 2019 (Music Performance)
-      - Best Environmental Campaign and Ambassador 2018
+- school: Sekolah Mondial, Batam, Indonesia
+  programme: Senior High School (Science Major)
+  date: Jul 2017 - Jun 2020
+  description:
+    - Ranked 3rd in the Class of 2020, Best in Mathematics for 3 consecutive years
+    - Mathematics Olympiad Medalist (2x Gold, 1x Silver, 3x Bronze from city to regionals)
+    - 2nd Place City-Level Physics Olympiad 2019
+    - 1st Place City-Level Basketball Competition 2019
+    - 1st Place City-Level Battle of the Bands 2019 (Music Performance)
+    - Best Environmental Campaign and Ambassador 2018
