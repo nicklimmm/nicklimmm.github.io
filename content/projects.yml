@@ -1,0 +1,32 @@
+- name: EverydayFit
+  repoLink: https://github.com/QixyQix/CZ2006-SWEE-EverydayFit
+  date: Sep 2021 - Nov 2021
+  description:
+    - Created a fitness mobile app with React Native, Node Typescript, MongoDB, and Tailwind CSS with SCRUM methodology in a team of 6
+    - Spearheaded the team in front-end development and successfully developed a well-designed user interface
+
+- name: SiFinance
+  link: https://play.google.com/store/apps/details?id=com.SiFinance
+  date: May 2021 - Aug 2021
+  description:
+    - A personal finance mobile app using React Native and Expo, along with cashflow visualizations
+    - Downloaded by 60+ new users in less than 3 days
+
+# - name: Todo App
+#   link: https://todo-app-firebase-6fcc3.web.app/
+#   repoLink: https://github.com/nicklimmm/todo-app-firebase
+#   description:
+#     - Todo App made with React Typescript, Firebase, Bootstrap and deployed using Firebase Hosting
+#     - Included features such as authentication and real-time database
+
+# - name: Neural Style Transfer
+#   link: https://www.kaggle.com/nicklimmm/neural-style-transfer
+#   description:
+#     -
+
+- name: Movie Analysis and Rating Prediction
+  repoLink: https://github.com/nicklimmm/movie-analysis
+  date: Mar 2021 - Apr 2021
+  description:
+    - Led a team of 3 to analyze movies from The Movie Database APIs using Python and data science libraries
+    - Programmed machine learning models using scikit-learn, Keras, and Tensorflow to predict a movie's popularity rating with 72% accuracy and 70% recall
