@@ -2,8 +2,8 @@ import Head from "next/head";
 import { IconContext } from "react-icons";
 
 export const Layout = ({
-  title = "nicklimmm.github.io",
-  content = "nicklimmm.github.io",
+  title = "Nicky Lim's Personal Website",
+  content = "Nicky Lim's Personal Website",
   children,
 }) => {
   return (
@@ -14,17 +14,6 @@ export const Layout = ({
           <meta name="description" content={content} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        {/* <header className="bg-red-500">
-          <Link href="#">
-            <a>Lorem</a>
-          </Link>
-          <Link href="#">
-            <a>Lorem2</a>
-          </Link>
-          <Link href="#">
-            <a>Lorem3</a>
-          </Link>
-        </header> */}
 
         <main>{children}</main>
 
