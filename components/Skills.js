@@ -22,14 +22,14 @@ export const Skills = ({ bgColor }) => {
                     {key}:
                   </h2>
                   <ul className="mt-1">
-                    {typeof skill[key] === "string"
-                      ? skill[key]
-                      : skill[key].map((desc, idx) => (
+                    {typeof value === "string"
+                      ? value
+                      : value.map((item, idx) => (
                           <li
                             className="my-1 list-disc list-inside"
                             key={`${idx}`}
                           >
-                            {desc}
+                            {item}
                           </li>
                         ))}
                   </ul>
