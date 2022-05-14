@@ -17,10 +17,8 @@ export const Skills = ({ bgColor }) => {
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">
               {Object.entries(skill).map(([key, value], idx) => (
-                <>
-                  <h2 className="text-lg font-semibold" key={idx}>
-                    {key}:
-                  </h2>
+                <div key={idx}>
+                  <h2 className="text-lg font-semibold">{key}:</h2>
                   <ul className="mt-1">
                     {typeof value === "string"
                       ? value
@@ -33,7 +31,7 @@ export const Skills = ({ bgColor }) => {
                           </li>
                         ))}
                   </ul>
-                </>
+                </div>
               ))}
             </div>
           </AnimationOnScroll>

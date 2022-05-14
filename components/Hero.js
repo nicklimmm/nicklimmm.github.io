@@ -7,17 +7,28 @@ import {
   FaAngleDoubleDown,
 } from "react-icons/fa";
 
+const quotes = [
+  "I think, therefore I am.",
+  "Inspire. Educate. Motivate.",
+  "Why do programmers like dark mode? Because light attracts bugs. ;)",
+  "What do programmers do when they are hungry? The grab a byte.",
+];
+
+const selectRandomQuote = () => {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+};
+
 export const Hero = () => {
   return (
     <div className="relative lg:px-24 px-12 min-h-screen flex md:flex-row flex-col items-center justify-center">
       <div className="md:w-7/12 md:text-left text-center my-3 ml-8">
         <h1 className="text-6xl font-semibold my-4">Hi! I&apos;m Nicky!</h1>
         <p className="text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          voluptates nesciunt, totam autem repellendus facere eaque eligendi
-          doloremque voluptatum magni repellat, recusandae obcaecati et
-          perspiciatis sint, soluta rem aspernatur vitae.
+          I am fascinated with backend development, machine learning, and the
+          benefits of technology to society! Feel free to connect and reach out
+          for future opportunities!
         </p>
+        <p className="text-lg italic my-4">&quot;{selectRandomQuote()}&quot;</p>
         <div className="space-x-8 my-5">
           <Link href="https://github.com/nicklimmm/">
             <a className="hover:text-gray-900 text-gray-700">
