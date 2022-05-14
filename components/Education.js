@@ -2,9 +2,11 @@ import educationContent from "../content/education.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ITEM_ANIMATION_DURATION } from "../config";
 
-export const Education = () => {
+export const Education = ({ bgColor }) => {
   return (
-    <div className="relative lg:px-24 px-12 py-12 min-h-screen bg-gray-100 flex flex-col items-center">
+    <div
+      className={`relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center ${bgColor}`}
+    >
       <h1 className="md:text-6xl text-5xl font-semibold my-4">Education</h1>
       <div>
         {educationContent.map((edu, idx) => (

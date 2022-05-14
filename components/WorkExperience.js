@@ -2,9 +2,11 @@ import workExperienceContent from "../content/work-experience.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ITEM_ANIMATION_DURATION } from "../config";
 
-export const WorkExperience = () => {
+export const WorkExperience = ({ bgColor }) => {
   return (
-    <div className="relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center">
+    <div
+      className={`relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center ${bgColor}`}
+    >
       <h1 className="md:text-6xl text-5xl font-semibold my-4">
         Work Experience
       </h1>

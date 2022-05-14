@@ -5,15 +5,13 @@ import { Education } from "../components/Education";
 import { WorkExperience } from "../components/WorkExperience";
 import { Ccas } from "../components/Ccas";
 import { Projects } from "../components/Projects";
+import AlternatingBg from "../components/AlternatingBg";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <Education />
-      <WorkExperience />
-      <Ccas />
-      <Projects />
+      <AlternatingBg components={[Education, WorkExperience, Projects, Ccas]} />
     </Layout>
   );
 }

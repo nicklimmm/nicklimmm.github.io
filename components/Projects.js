@@ -4,9 +4,11 @@ import { FaLink, FaGithubAlt } from "react-icons/fa";
 import Link from "next/link";
 import { ITEM_ANIMATION_DURATION } from "../config";
 
-export const Projects = () => {
+export const Projects = ({ bgColor }) => {
   return (
-    <div className="relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center">
+    <div
+      className={`relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center ${bgColor}`}
+    >
       <h1 className="md:text-6xl text-5xl font-semibold my-4">Projects</h1>
       <div>
         {projectsContent.map((project, idx) => (
