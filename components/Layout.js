@@ -29,7 +29,7 @@ export const Layout = ({
         <main>{children}</main>
 
         <footer className="bg-gray-900 text-gray-100 py-8 text-center">
-          Copyright &copy; 2022 Nicky Lim
+          Copyright &copy; {new Date().getFullYear()} Nicky Lim
         </footer>
       </div>
     </IconContext.Provider>
