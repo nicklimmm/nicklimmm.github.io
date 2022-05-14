@@ -1,5 +1,6 @@
 import educationContent from "../content/education.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { ITEM_ANIMATION_DURATION } from "../config";
 
 export const Education = () => {
   return (
@@ -9,7 +10,7 @@ export const Education = () => {
         {educationContent.map((edu, idx) => (
           <AnimationOnScroll
             key={idx}
-            duration={2}
+            duration={ITEM_ANIMATION_DURATION}
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">

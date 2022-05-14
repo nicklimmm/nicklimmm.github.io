@@ -2,6 +2,7 @@ import projectsContent from "../content/projects.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { FaLink, FaGithubAlt } from "react-icons/fa";
 import Link from "next/link";
+import { ITEM_ANIMATION_DURATION } from "../config";
 
 export const Projects = () => {
   return (
@@ -11,7 +12,7 @@ export const Projects = () => {
         {projectsContent.map((project, idx) => (
           <AnimationOnScroll
             key={idx}
-            duration={2}
+            duration={ITEM_ANIMATION_DURATION}
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">
