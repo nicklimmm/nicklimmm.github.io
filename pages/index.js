@@ -6,12 +6,15 @@ import { WorkExperience } from "../components/WorkExperience";
 import { Ccas } from "../components/Ccas";
 import { Projects } from "../components/Projects";
 import AlternatingBg from "../components/AlternatingBg";
+import { Skills } from "../components/Skills";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <AlternatingBg components={[Education, WorkExperience, Projects, Ccas]} />
+      <AlternatingBg
+        components={[Education, WorkExperience, Projects, Ccas, Skills]}
+      />
     </Layout>
   );
 }
