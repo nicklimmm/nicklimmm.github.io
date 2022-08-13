@@ -1,8 +1,9 @@
-import projectsContent from "../content/projects.yml";
+import { FaGithubAlt, FaLink } from "react-icons/fa";
+
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { FaLink, FaGithubAlt } from "react-icons/fa";
-import Link from "next/link";
 import { ITEM_ANIMATION_DURATION } from "../config";
+import Link from "next/link";
+import projectsContent from "../content/projects.yml";
 
 export const Projects = ({ bgColor }) => {
   return (
@@ -17,13 +18,13 @@ export const Projects = ({ bgColor }) => {
             duration={ITEM_ANIMATION_DURATION}
             animateIn={`animate__fadeIn`}
           >
-            <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">
+            <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
               <h2 className="text-lg font-semibold">{project.name}</h2>
               <h2 className="text-lg font-semibold">{project.date}</h2>
               {project.description && (
                 <ul className="mt-4">
                   {project.description.map((desc, idx) => (
-                    <li className="my-1 list-disc list-inside" key={`${idx}`}>
+                    <li className="my-1 list-disc" key={`${idx}`}>
                       {desc}
                     </li>
                   ))}

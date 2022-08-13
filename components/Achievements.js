@@ -1,6 +1,6 @@
-import achievementsContent from "../content/achievements.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ITEM_ANIMATION_DURATION } from "../config";
+import achievementsContent from "../content/achievements.yml";
 
 export const Achievements = ({ bgColor }) => {
   return (
@@ -15,7 +15,7 @@ export const Achievements = ({ bgColor }) => {
             duration={ITEM_ANIMATION_DURATION}
             animateIn={`animate__fadeIn`}
           >
-            <div className="my-6 bg-gray-200 px-12 py-4 rounded-xl">
+            <div className="my-6 bg-gray-200 px-12 py-4 rounded-xl max-w-4xl">
               <p className="my-1">{achievement}</p>
             </div>
           </AnimationOnScroll>

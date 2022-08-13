@@ -1,6 +1,6 @@
-import skillsContent from "../content/skills.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ITEM_ANIMATION_DURATION } from "../config";
+import skillsContent from "../content/skills.yml";
 
 export const Skills = ({ bgColor }) => {
   return (
@@ -17,16 +17,13 @@ export const Skills = ({ bgColor }) => {
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">
               {Object.entries(skill).map(([key, value], idx) => (
-                <div key={idx}>
+                <div key={idx} className="max-w-4xl">
                   <h2 className="text-lg font-semibold">{key}:</h2>
                   <ul className="mt-1">
                     {typeof value === "string"
                       ? value
                       : value.map((item, idx) => (
-                          <li
-                            className="my-1 list-disc list-inside"
-                            key={`${idx}`}
-                          >
+                          <li className="my-1 list-disc" key={`${idx}`}>
                             {item}
                           </li>
                         ))}

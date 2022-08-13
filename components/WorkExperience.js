@@ -1,6 +1,6 @@
-import workExperienceContent from "../content/work-experience.yml";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ITEM_ANIMATION_DURATION } from "../config";
+import workExperienceContent from "../content/work-experience.yml";
 
 export const WorkExperience = ({ bgColor }) => {
   return (
@@ -17,7 +17,7 @@ export const WorkExperience = ({ bgColor }) => {
             duration={ITEM_ANIMATION_DURATION}
             animateIn={`animate__fadeIn`}
           >
-            <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl">
+            <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
               <h2 className="text-lg font-semibold">{work.position}</h2>
               {work.employer && (
                 <h2 className="text-lg font-semibold">{work.employer}</h2>
@@ -26,7 +26,7 @@ export const WorkExperience = ({ bgColor }) => {
               {work.description && (
                 <ul className="mt-4">
                   {work.description.map((desc, idx) => (
-                    <li className="my-1 list-disc list-inside" key={`${idx}`}>
+                    <li className="my-1 list-disc" key={`${idx}`}>
                       {desc}
                     </li>
                   ))}
