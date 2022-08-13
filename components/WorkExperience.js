@@ -7,7 +7,7 @@ export const WorkExperience = ({ bgColor }) => {
     <div
       className={`relative lg:px-24 px-12 py-12 min-h-screen flex flex-col items-center ${bgColor}`}
     >
-      <h1 className="md:text-6xl text-5xl font-semibold my-4">
+      <h1 className="md:text-6xl text-5xl font-semibold my-4 text-center">
         Work Experience
       </h1>
       <div>

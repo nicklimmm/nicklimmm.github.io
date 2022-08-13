@@ -1,11 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
 import {
+  FaAngleDoubleDown,
+  FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
-  FaAngleDoubleDown,
 } from "react-icons/fa";
+
+import Image from "next/image";
+import Link from "next/link";
 
 const quotes = [
   "I think, therefore I am.",
@@ -21,7 +22,7 @@ const selectRandomQuote = () => {
 export const Hero = () => {
   return (
     <div className="relative lg:px-24 px-12 min-h-screen flex md:flex-row flex-col items-center justify-center">
-      <div className="md:w-7/12 md:text-left text-center my-3 ml-8">
+      <div className="md:w-7/12 md:text-left text-center my-3">
         <h1 className="text-6xl font-semibold my-4">Hi! I&apos;m Nicky!</h1>
         <p className="text-lg">
           I am fascinated with backend development, machine learning, and the
