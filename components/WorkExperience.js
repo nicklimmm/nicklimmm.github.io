@@ -22,7 +22,7 @@ export const WorkExperience = ({ bgColor }) => {
               {work.employer && (
                 <h2 className="text-lg font-semibold">{work.employer}</h2>
               )}
-              <h2 className="text-lg font-semibold">{work.date}</h2>
+              <h2 className="text-md italic">{work.date}</h2>
               {work.description && (
                 <ul className="mt-4">
                   {work.description.map((desc, idx) => (
