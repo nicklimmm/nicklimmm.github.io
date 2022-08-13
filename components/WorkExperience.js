@@ -18,9 +18,9 @@ export const WorkExperience = ({ bgColor }) => {
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
-              <h2 className="text-lg font-semibold">{work.position}</h2>
+              <h2 className="text-lg font-semibold mb-2">{work.position}</h2>
               {work.employer && (
-                <h2 className="text-lg font-semibold">{work.employer}</h2>
+                <h2 className="text-lg font-semibold mb-2">{work.employer}</h2>
               )}
               <h2 className="text-md italic">{work.date}</h2>
               {work.description && (

@@ -19,7 +19,7 @@ export const Projects = ({ bgColor }) => {
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
-              <h2 className="text-lg font-semibold">{project.name}</h2>
+              <h2 className="text-lg font-semibold mb-2">{project.name}</h2>
               <h2 className="text-md italic">{project.date}</h2>
               {project.description && (
                 <ul className="mt-4">

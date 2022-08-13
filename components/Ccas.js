@@ -18,8 +18,8 @@ export const Ccas = ({ bgColor }) => {
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
-              <h2 className="text-lg font-semibold">{cca.position}</h2>
-              <h2 className="text-lg font-semibold">{cca.organisation}</h2>
+              <h2 className="text-lg font-semibold mb-2">{cca.position}</h2>
+              <h2 className="text-lg font-semibold mb-2">{cca.organisation}</h2>
               <h2 className="text-md italic">{cca.date}</h2>
               {cca.description && (
                 <ul className="mt-4">

@@ -16,8 +16,8 @@ export const Education = ({ bgColor }) => {
             animateIn={`animate__fadeIn`}
           >
             <div className="my-12 bg-gray-200 px-12 py-6 rounded-xl max-w-4xl">
-              <h2 className="text-lg font-semibold">{edu.school}</h2>
-              <h2 className="text-lg font-semibold">{edu.programme}</h2>
+              <h2 className="text-lg font-semibold mb-2">{edu.school}</h2>
+              <h2 className="text-lg font-semibold mb-2">{edu.programme}</h2>
               <h2 className="text-md italic">{edu.date}</h2>
               {edu.description && (
                 <ul className="mt-4">
