@@ -12,7 +12,7 @@ const quotes = [
   "I think, therefore I am.",
   "Inspire. Educate. Motivate.",
   "Why do programmers like dark mode? Because light attracts bugs. ;)",
-  "What do programmers do when they are hungry? The grab a byte.",
+  "What do programmers do when they are hungry? They grab a byte.",
 ];
 
 const selectRandomQuote = () => {
