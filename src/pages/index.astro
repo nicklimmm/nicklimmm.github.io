@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { GithubIcon, LinkedinIcon, MailIcon } from "astro-feather";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,7 +12,26 @@ import Layout from "../layouts/Layout.astro";
       <div class="text-lg italic">
         Final Year CS Student @ NTU Singapore. Software Engineering.
       </div>
-      <!-- TODO: Icon links: GitHub, LinkedIn, Email -->
+      <div class="flex">
+        <a
+          href="https://github.com/nicklimmm"
+          class="pr-4 py-2 hover:text-blue-600"
+        >
+          <GithubIcon size={28} />
+        </a>
+        <a
+          href="https://linkedin.com/in/nicklimmm"
+          class="pr-4 py-2 hover:text-blue-600"
+        >
+          <LinkedinIcon size={28} />
+        </a>
+        <a
+          href="mailto:nickylim.p@gmail.com"
+          class="pr-4 py-2 hover:text-blue-600"
+        >
+          <MailIcon size={28} />
+        </a>
+      </div>
     </div>
 
     <!-- Work Experience -->
